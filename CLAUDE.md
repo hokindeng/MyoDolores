@@ -288,4 +288,107 @@ ASAP uses Hydra for configuration management. Key config categories:
 
 ## Memories
 
-- to memorize
+### MyoDolores Keyboard Control Project Status (2025-06-25)
+
+**PROJECT GOAL**: Create keyboard-controlled demo for myo_model humanoid using up/down/left/right keys for locomotion.
+
+**COMPLETED ANALYSIS**:
+✅ **MyoSkeleton Model**: myo_model_internal/myo_model/myoskeleton/
+- MyoSkeleton v1.0.0 with 324 joints (full humanoid: spine L5-C1, arms, legs)
+- XML files: myoskeleton.xml (basic), myoskeleton_with_motors.xml (actuated)
+- Joint groupings: ROOT, SPINE, NECK, ARMS_R/L, LEGS_R/L for organized control
+- General actuators with force ranges (-250, 250) N and PD control
+
+✅ **Motion Data Pipeline**: myo_api + myo_data
+- mjTrajectory class loads H5 motion files with time, qpos, qvel, ctrl, marker data
+- 8,000+ motion sequences in myo_data/ (HAA500, AIST, dance, gymnastics, etc.)
+- MuJoCo 3.2.4 integration with real-time physics simulation
+
+✅ **RL Control Architecture**: ASAP + unitree_rl_gym analysis
+- **Key Insight**: Physics requires trained RL policies, not direct joint control
+- Both frameworks use velocity commands [vel_x, vel_y, ang_vel_z] as policy inputs
+- Real-time control at 50Hz with policy inference for responsive keyboard control
+- Command-based observation space: IMU + gravity + commands + joint states + history
+
+**TRAINING REQUIREMENTS**: 
+❌ **GPU LIMITATION**: Current machine lacks GPU for RL training
+- Need RTX 3090+ GPU for 4096 parallel Isaac Gym environments
+- Training time: 8-10 hours for velocity command following policy
+- Must switch to GPU machine for training phase
+
+**NEXT MACHINE SETUP**:
+```bash
+# Environment (must use exactly this name)
+conda create -n myodolores python=3.8
+conda activate myodolores
+
+# Core dependencies
+pip install mujoco==3.2.4
+pip install -e ASAP/
+pip install -e ASAP/isaac_utils/
+pip install -e myo_api/
+
+# Training command for MyoSkeleton locomotion
+python ASAP/humanoidverse/train_agent.py \
++simulator=isaacgym \
++exp=locomotion \
++robot=myoskeleton \
++rewards=loco/velocity_tracking \
++obs=loco/locomotion_obs_with_commands \
+num_envs=4096 \
+project_name=MyoDoloresDemo \
+experiment_name=VelocityControl_Training
+```
+
+**POST-TRAINING IMPLEMENTATION**:
+```python
+# Keyboard control with trained policy (50Hz loop)
+while True:
+    vel_cmd = keyboard_to_velocity_commands(key_state)  # [x,y,yaw] from arrows
+    obs[9:12] = vel_cmd  # Command portion of observation
+    actions = trained_policy(obs)  # RL policy inference
+    mj_data.ctrl[:] = actions  # Apply to physics
+    mujoco.mj_step(mj_model, mj_data)
+    time.sleep(0.02)  # 50Hz
+```
+
+**KEY FILES FOR TRANSFER**:
+- myo_model_internal/myo_model/myoskeleton/myoskeleton_with_motors.xml (robot model)
+- myo_data/HAA500_output/*/ (motion reference data)
+- ASAP/ (training framework)
+- myo_api/ (model loading utilities)
+- TRAINING_PLAN.md (detailed setup instructions)
+
+**CURRENT ENVIRONMENT**: myodolores conda env with MuJoCo 3.2.4 installed
+
+**CRITICAL CONTEXT FOR NEXT CLAUDE**:
+This project creates a KEYBOARD-CONTROLLED HUMANOID DEMO. The user wants:
+- Arrow keys UP/DOWN/LEFT/RIGHT to control walking direction
+- Real-time responsive control at 50Hz
+- Physics-based simulation with balance and stability
+
+**SOLUTION ARCHITECTURE DISCOVERED**:
+- Traditional joint control FAILS due to physics complexity
+- RL policy is REQUIRED to handle balance, stepping, and physics
+- Velocity commands [vel_x, vel_y, ang_vel_z] are fed to trained RL policy
+- Policy outputs joint torques that respect physics and maintain balance
+- 50Hz control loop: keyboard → velocity commands → RL policy → joint torques → physics
+
+**WHY OTHER APPROACHES WON'T WORK**:
+❌ Direct joint control - no balance, falls over
+❌ PD control with reference poses - too complex, unstable  
+❌ Center of mass control - still needs balance controller
+✅ RL policy trained for velocity command following - handles all physics
+
+**TRAINING IS MANDATORY**: No shortcuts exist. Must train RL policy first.
+
+**FINAL STATUS CHECK (2025-06-25)**:
+- ✅ Repository: /home/ubuntu/MyoDolores/ with all submodules
+- ✅ Environment: myodolores conda env active
+- ✅ MuJoCo: 3.2.4 installed and verified  
+- ✅ Documentation: CLAUDE.md, TRAINING_PLAN.md, MEMORY_SUMMARY.md complete
+- ✅ Todo list: 5/7 tasks completed, 2 remaining (GPU training + demo)
+- ✅ Analysis: 5+ hours of comprehensive investigation complete
+- ❌ GPU training: Blocked on current machine, ready for transfer
+
+**READY FOR GPU MACHINE TRANSFER** 🚀
