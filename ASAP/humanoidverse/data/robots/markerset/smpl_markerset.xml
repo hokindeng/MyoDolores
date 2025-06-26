@@ -1,0 +1,28 @@
+<!-- =================================================
+Copyright (c) 2025 MyoLab, Inc. All Rights Reserved.
+This software and associated documentation files (the "Software") are the intellectual property of MyoLab, Inc. Unauthorized copying, modification, distribution, or use of this code, in whole or in part, without express written permission from the copyright owner is strictly prohibited.
+====================================================== -->
+<markers name="smpl_markerset" model="MyoSkeleton v1.0.0">
+    <marker body="myoskeleton_root" name="pelvis" pos="0 0.05 0" />
+    <marker body="femur_l" name="left_hip" pos="0 0 0" />
+    <marker body="femur_r" name="right_hip" pos="0 0 0" />
+    <marker body="lumbar_spine_3" name="spine1" pos="0 0 0" />
+    <marker body="tibia_l" name="left_knee" pos="0 0 0" />
+    <marker body="tibia_r" name="right_knee" pos="0 0 0" />
+    <marker body="thoracic_spine" name="spine2" pos="0 0.1 0" />
+    <marker body="talus_l" name="left_ankle" pos="0 0 0" />
+    <marker body="talus_r" name="right_ankle" pos="0 0 0" />
+    <marker body="thoracic_spine" name="spine3" pos="0 0.15 0" />
+    <marker body="toes_l" name="left_foot" pos="0 0 0" />
+    <marker body="toes_r" name="right_foot" pos="0 0 0" />
+    <marker body="cervical_spine_7" name="neck" pos="0 0 0" />
+    <marker body="clavicle_l" name="left_collar" pos="0 -0.05 -0.05" />
+    <marker body="clavicle_r" name="right_collar" pos="0 -0.05 0.05" />
+    <marker body="skull" name="head" pos="0 0 0" />
+    <marker body="humerus_l" name="left_shoulder" pos="0 0 0" />
+    <marker body="humerus_r" name="right_shoulder" pos="0 0 0" />
+    <marker body="ulna_l" name="left_elbow" pos="0 0 -0.01" />
+    <marker body="ulna_r" name="right_elbow" pos="0 0 0.01" />
+    <marker body="lunate_l" name="left_wrist" pos="0 0 0" />
+    <marker body="lunate_r" name="right_wrist" pos="0 0 0" />
+</markers>

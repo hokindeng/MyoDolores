@@ -1,0 +1,116 @@
+<!-- =================================================
+Copyright (c) 2025 MyoLab, Inc. All Rights Reserved.
+This software and associated documentation files (the "Software") are the intellectual property of MyoLab, Inc. Unauthorized copying, modification, distribution, or use of this code, in whole or in part, without express written permission from the copyright owner is strictly prohibited.
+====================================================== -->
+<markers name="mecka">
+    <marker body="skull" name="ARIEL" pos="-0.000195 0.157042 0.000000" />
+    <marker body="skull" name="LFHD" pos="0.080571 0.107708 -0.047663" />
+    <marker body="skull" name="LBHD" pos="-0.076254 0.088320 -0.059112" />
+    <marker body="skull" name="RFHD" pos="0.080571 0.107708 0.047663" />
+    <marker body="skull" name="RBHD" pos="-0.076254 0.088320 0.059112" />
+
+    <marker body="thoracic_spine" name="C7" pos="-0.058507 0.250253 0.000000" />
+    <marker body="thoracic_spine" name="CLAV" pos="0.084102 0.255421 0.000000" />
+    <marker body="thoracic_spine" name="STRN" pos="0.136805 0.112773 0.000000" />
+
+    <marker body="thoracic_spine" name="T10" pos="-0.074504 0.060000 0.000000" />
+    <marker body="thoracic_spine" name="LT10" pos="-0.063878 0.060000 -0.077725" />
+    <marker body="thoracic_spine" name="RT10" pos="-0.063878 0.060000 0.077725" />
+
+
+    <marker body="clavicle_l" name="LFSH" pos="0.025797 0.001946 -0.080579" />
+    <marker body="clavicle_l" name="LTSH" pos="-0.026910 0.038960 -0.149240" />
+    <marker body="clavicle_l" name="LBSH" pos="-0.095521 -0.024395 -0.101827" />
+
+
+    <marker body="clavicle_r" name="RFSH" pos="0.025797 0.001946 0.080579" />
+    <marker body="clavicle_r" name="RTSH" pos="-0.026910 0.038960 0.149240" />
+    <marker body="clavicle_r" name="RBSH" pos="-0.095521 -0.024395 0.101827" />
+
+
+    <marker body="thoracic_spine" name="LCM_1" pos="-0.075 0.192 -0.053" />
+    <marker body="thoracic_spine" name="LCM_2" pos="-0.075 0.192 -0.015" />
+    <marker body="thoracic_spine" name="LCM_3" pos="-0.075 0.141 -0.053" />
+    <marker body="thoracic_spine" name="LCM_4" pos="-0.075 0.141 -0.015" />
+    <marker body="thoracic_spine" name="LCM_5" pos="-0.075 0.156 -0.025" />
+
+
+    <marker body="humerus_l" name="LUPA" pos="0.020435 -0.145936 -0.040684" />
+    <marker body="humerus_l" name="LELB" pos="0.015047 -0.277975 -0.040690" />
+    <marker body="humerus_l" name="LBEL" pos="-0.032530 -0.283218 0.006807" />
+
+
+    <marker body="radius_l" name="LFRM" pos="0.015132 -0.182904 -0.051253" />
+    <marker body="radius_l" name="LIWR" pos="0.062596 -0.241041 -0.019525" />
+    <marker body="radius_l" name="LOWR" pos="-0.016626 -0.240978 -0.024870" />
+
+
+    <marker body="lunate_l" name="LIHAND" pos="0.025633 -0.082561 -0.030261" />
+    <marker body="lunate_l" name="LOHAND" pos="-0.027167 -0.077237 -0.014374" />
+
+
+    <marker body="proximal_phalanx_1_l" name="LTHM3" pos="0 -0.005 -0.015" />
+    <marker body="distal_phalanx_1_l" name="LTHM6" pos="0 -0.005 -0.015" />
+    <marker body="intermediate_phalanx_2_l" name="LIDX3" pos="0 -0.005 -0.015" />
+    <marker body="distal_phalanx_2_l" name="LIDX6" pos="0 -0.005 -0.015" />
+    <marker body="proximal_phalanx_3_l" name="LMID0" pos="0 -0.01 -0.015" />
+    <marker body="distal_phalanx_3_l" name="LMID6" pos="0 -0.005 -0.015" />
+    <marker body="intermediate_phalanx_4_l" name="LRNG3" pos="0 -0.005 -0.015" />
+    <marker body="distal_phalanx_4_l" name="LRNG6" pos="0 -0.005 -0.015" />
+    <marker body="intermediate_phalanx_5_l" name="LPNK3" pos="0 -0.005 -0.015" />
+    <marker body="distal_phalanx_5_l" name="LPNK6" pos="0 -0.005 -0.015" />
+
+    <marker body="humerus_r" name="RUPA" pos="0.020477 -0.082556 0.030121" />
+    <marker body="humerus_r" name="RELB" pos="0.015047 -0.277975 0.040690" />
+    <marker body="humerus_r" name="RBEL" pos="-0.032530 -0.283218 -0.006807" />
+
+    <marker body="radius_r" name="RFRM" pos="0.015195 -0.103679 0.051253" />
+    <marker body="radius_r" name="RIWR" pos="0.062596 -0.241041 0.019525" />
+    <marker body="radius_r" name="ROWR" pos="-0.016626 -0.240978 0.024870" />
+
+    <marker body="lunate_r" name="RIHAND" pos="0.025633 -0.082561 0.015" />
+    <marker body="lunate_r" name="ROHAND" pos="-0.027167 -0.077237 0.015" />
+
+    <marker body="proximal_phalanx_1_r" name="RTHM3" pos="0 -0.005 0.015" />
+    <marker body="distal_phalanx_1_r" name="RTHM6" pos="0 -0.005 0.015" />
+    <marker body="intermediate_phalanx_2_r" name="RIDX3" pos="0 -0.005 0.015" />
+    <marker body="distal_phalanx_2_r" name="RIDX6" pos="0 -0.005 0.015" />
+    <marker body="proximal_phalanx_3_r" name="RMID0" pos="0 -0.01 0.015" />
+    <marker body="distal_phalanx_3_r" name="RMID6" pos="0 -0.005 0.015" />
+    <marker body="intermediate_phalanx_4_r" name="RRNG3" pos="0 -0.005 0.015" />
+    <marker body="distal_phalanx_4_r" name="RRNG6" pos="0 -0.005 0.015" />
+    <marker body="intermediate_phalanx_5_r" name="RPNK3" pos="0 -0.005 0.015" />
+    <marker body="distal_phalanx_5_r" name="RPNK6" pos="0 -0.005 0.015" />
+
+    <marker body="pelvis" name="LFWT" pos="0.015402 0.049490 -0.093506" />
+    <marker body="pelvis" name="LMWT" pos="-0.084912 0.049570 -0.151686" />
+    <marker body="pelvis" name="LBWT" pos="-0.180100 0.054927 -0.051409" />
+
+    <marker body="pelvis" name="RFWT" pos="0.015402 0.049490 0.093506" />
+    <marker body="pelvis" name="RMWT" pos="-0.084912 0.049570 0.151686" />
+    <marker body="pelvis" name="RBWT" pos="-0.180100 0.054927 0.051409" />
+
+    <marker body="femur_l" name="LTHI" pos="0.083751 -0.230495 -0.045916" />
+    <marker body="femur_l" name="LKNE" pos="0.004400 -0.410009 -0.051261" />
+    <marker body="femur_l" name="LKNU" pos="0.083582 -0.399509 -0.003663" />
+
+    <marker body="tibia_l" name="LSHN" pos="0.052031 -0.225188 -0.003688" />
+    <marker body="tibia_l" name="LANK" pos="-0.000874 -0.383596 -0.051265" />
+
+    <marker body="calcaneus_l" name="LHEL" pos="-0.027003 0.023115 0.006812" />
+    <marker body="calcaneus_l" name="LMT5" pos="0.147334 0.017695 -0.051147" />
+    <marker body="calcaneus_l" name="LMT1" pos="0.189516 0.017660 0.038676" />
+    <marker body="calcaneus_l" name="LTOE" pos="0.252934 0.012328 -0.014090" />
+
+    <marker body="femur_r" name="RTHI" pos="0.083861 -0.093171 0.045916" />
+    <marker body="femur_r" name="RKNE" pos="0.004413 -0.410009 0.051261" />
+    <marker body="femur_r" name="RKNU" pos="0.083582 -0.399509 0.003663" />
+
+    <marker body="tibia_r" name="RSHN" pos="0.052095 -0.145963 0.003688" />
+    <marker body="tibia_r" name="RANK" pos="-0.000874 -0.383596 0.051265" />
+
+    <marker body="calcaneus_r" name="RHEL" pos="-0.027003 0.023115 -0.006812" />
+    <marker body="calcaneus_r" name="RMT5" pos="0.147334 0.017695 0.051147" />
+    <marker body="calcaneus_r" name="RMT1" pos="0.189516 0.017660 -0.038676" />
+    <marker body="calcaneus_r" name="RTOE" pos="0.252934 0.012328 0.014090" />
+</markers>

@@ -1,0 +1,27 @@
+# MyoDolores Keyboard Control Requirements
+# Install with: pip install -r requirements.txt
+
+# Core scientific computing
+numpy>=1.20.0
+scipy>=1.7.0
+matplotlib>=3.3.0
+h5py>=3.1.0
+PyYAML>=5.4.0
+Pillow>=8.0.0
+
+# Physics simulation
+mujoco==3.2.4
+
+# Machine learning
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Utilities
+termcolor>=1.1.0
+tqdm>=4.60.0
+
+# Optional for advanced features
+# keyboard>=0.13.5  # For keyboard input (Linux only)
+# wandb>=0.12.0     # For training visualization
+# tensorboard>=2.8.0  # For training logging

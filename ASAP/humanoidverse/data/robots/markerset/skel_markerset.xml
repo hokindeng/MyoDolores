@@ -1,0 +1,30 @@
+<!-- =================================================
+Copyright (c) 2025 MyoLab, Inc. All Rights Reserved.
+This software and associated documentation files (the "Software") are the intellectual property of MyoLab, Inc. Unauthorized copying, modification, distribution, or use of this code, in whole or in part, without express written permission from the copyright owner is strictly prohibited.
+====================================================== -->
+<markers name="skel" model="MyoSkeleton v1.0.0">
+    <marker name="body_root" body="pelvis" pos="0 0 0" movable="0.0" />
+    <marker name="femur_r" body="femur_r" pos="0 0 0" movable="0.0" />
+    <marker name="tibia_r" body="tibia_r" pos="0 0 0" movable="0.0" />
+    <marker name="talus_r" body="talus_r" pos="0 0 0" movable="0.0" />
+    <marker name="calcn_r" body="calcaneus_r" pos="0 0 0" movable="0.0" />
+    <marker name="toes_r" body="toes_r" pos="0 0 0" movable="0.0" />
+    <marker name="femur_l" body="femur_l" pos="0 0 0" movable="0.0" />
+    <marker name="tibia_l" body="tibia_l" pos="0 0 0" movable="0.0" />
+    <marker name="talus_l" body="talus_l" pos="0 0 0" movable="0.0" />
+    <marker name="calcn_l" body="calcaneus_l" pos="0 0 0" movable="0.0" />
+    <marker name="toes_l" body="toes_l" pos="0 0 0" movable="0.0" />
+    <marker name="lumbar3" body="lumbar_spine_3" pos="0 0 0" movable="0.0" />
+    <marker name="cerv7" body="cervical_spine_7" pos="0 0 0" movable="0.0" />
+    <marker name="skull" body="skull" pos="0 0 0" movable="0.0" />
+    <marker name="scapula_r" body="scapula_r" pos="0 0 0" movable="0.0" />
+    <marker name="humerus_r" body="humerus_r" pos="0 0 0" movable="0.0" />
+    <marker name="ulna_r" body="ulna_r" pos="0 0 0" movable="0.0" />
+    <marker name="radius_r" body="radius_r" pos="0 0 0" movable="0.0" />
+    <marker name="lunate_r" body="lunate_r" pos="0 0 0" movable="0.0" />
+    <marker name="scapula_l" body="scapula_l" pos="0 0 0" movable="0.0" />
+    <marker name="humerus_l" body="humerus_l" pos="0 0 0" movable="0.0" />
+    <marker name="ulna_l" body="ulna_l" pos="0 0 0" movable="0.0" />
+    <marker name="radius_l" body="radius_l" pos="0 0 0" movable="0.0" />
+    <marker name="lunate_l" body="lunate_l" pos="0 0 0" movable="0.0" />
+</markers>

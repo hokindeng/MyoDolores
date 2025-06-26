@@ -1,0 +1,68 @@
+<!-- =================================================
+Copyright (c) 2025 MyoLab, Inc. All Rights Reserved.
+This software and associated documentation files (the "Software") are the intellectual property of MyoLab, Inc. Unauthorized copying, modification, distribution, or use of this code, in whole or in part, without express written permission from the copyright owner is strictly prohibited.
+====================================================== -->
+<markers name="xsens" model="MyoSkeleton v1.0.0">
+    <marker name="pHipOrigin" body="pelvis" pos="-0.05 -0.0686844 0" movable="1.0" />
+    <marker name="pRightCSI" body="pelvis" pos="-0.0455149 0.0861143 0.0874403" movable="1.0" />
+    <marker name="pLeftCSI" body="pelvis" pos="-0.0390191 0.0854957 -0.0961678" movable="1.0" />
+    <marker name="pRightIschialTub" body="pelvis" pos="-0.116364 -0.125046 0.0400483" movable="1.0" />
+    <marker name="pLeftIschialTub" body="pelvis" pos="-0.116364 -0.125046 -0.0400483" movable="1.0" />
+    <marker name="pSacrum" body="pelvis" pos="-0.175 0.035 0" movable="1.0" />
+    <marker name="pL5SpinalProcess" body="lumbar_spine_5" pos="-0.0443 0.0085 0" movable="1.0" />
+    <marker name="pL3SpinalProcess" body="lumbar_spine_5" pos="-0.0493 0.0435 0" movable="1.0" />
+    <marker name="pT12SpinalProcess" body="thoracic_spine" pos="-0.0693 0 0" movable="1.0" />
+    <marker name="pPX" body="lumbar_spine_5" pos="0.095 0.21 0" movable="1.0" />
+    <marker name="pIJ" body="lumbar_spine_5" pos="0.04 0.37 0" movable="1.0" />
+    <marker name="pT4SpinalProcess" body="thoracic_spine" pos="-0.102 0.21 0" movable="1.0" />
+    <marker name="pT8SpinalProcess" body="thoracic_spine" pos="-0.098 0.11 0" movable="1.0" />
+    <marker name="pC7SpinalProcess" body="cervical_spine_7" pos="-0.075 0.02 0" movable="1.0" />
+    <marker name="pTopOfHead" body="skull" pos="0 0.14 0" movable="1.0" />
+    <marker name="pRightAuricularis" body="skull" pos="0 0.03 0.075" movable="1.0" />
+    <marker name="pLeftAuricularis" body="skull" pos="0 0.03 -0.075" movable="1.0" />
+    <marker name="pBackOfHead" body="skull" pos="-0.088 0.06 0" movable="1.0" />
+    <marker name="pRightAcromion" body="scapula_r" pos="0.0 0.010 0.0" movable="1.0" />
+    <marker name="pLeftAcromion" body="scapula_l" pos="0.0 0.010 0.0" movable="1.0" />
+    <marker name="pRightArmLatEpicondyle" body="humerus_r" pos="0.015 -0.28 0.04" movable="1.0" />
+    <marker name="pRightArmMedEpicondyle" body="humerus_r" pos="0.00225 -0.286 -0.046" movable="1.0" />
+    <marker name="pLeftArmLatEpicondyle" body="humerus_l" pos="0.015 -0.28 -0.04" movable="1.0" />
+    <marker name="pLeftArmMedEpicondyle" body="humerus_l" pos="0.00225005 -0.286 0.046" movable="1.0" />
+    <marker name="pRightUlnarStyloid" body="ulna_r" pos="-0.03 -0.237 0.005" movable="1.0" />
+    <marker name="pRightRadialStyloid" body="radius_r" pos="0.0005 -0.225 0.05" movable="1.0" />
+    <marker name="pRightOlecranon" body="ulna_r" pos="-0.04 0.01 0.002" movable="1.0" />
+    <marker name="pLeftUlnarStyloid" body="ulna_l" pos="-0.03 -0.238 -0.004" movable="1.0" />
+    <marker name="pLeftRadialStyloid" body="radius_l" pos="0.0005 -0.225 -0.05" movable="1.0" />
+    <marker name="pLeftOlecranon" body="ulna_l" pos="-0.04 0.01 -0.002" movable="1.0" />
+    <marker name="pRightTopOfHand" body="lunate_r" pos="0.05 -0.15 -0.01" movable="1.0" />
+    <marker name="pRightPinky" body="lunate_r" pos="0.05 -0.125 -0.045" movable="1.0" />
+    <marker name="pLeftTopOfHand" body="lunate_l" pos="0.05 -0.15 0.01" movable="1.0" />
+    <marker name="pLeftPinky" body="lunate_l" pos="0.05 -0.125 0.045" movable="1.0" />
+    <marker name="pRightGreaterTrochanter" body="femur_r" pos="-0.01 -0.0348377 0.08" movable="1.0" />
+    <marker name="pRightKneeLatEpicondyle" body="femur_r" pos="0 -0.405 0.05" movable="1.0" />
+    <marker name="pRightKneeMedEpicondyle" body="femur_r" pos="0 -0.405 -0.05" movable="1.0" />
+    <marker name="pRightPatella" body="patella_r" pos="0.028 0.03 0" movable="1.0" />
+    <marker name="pLeftGreaterTrochanter" body="femur_l" pos="-0.01 -0.0348377 -0.08" movable="1.0" />
+    <marker name="pLeftKneeLatEpicondyle" body="femur_l" pos="0 -0.405 -0.05" movable="1.0" />
+    <marker name="pLeftKneeMedEpicondyle" body="femur_l" pos="0 -0.405 0.05" movable="1.0" />
+    <marker name="pLeftPatella" body="patella_l" pos="0.028 0.03 0" movable="1.0" />
+    <marker name="pRightLatMalleolus" body="tibia_r" pos="-0.005 -0.41 0.053" movable="1.0" />
+    <marker name="pRightMedMalleolus" body="tibia_r" pos="0.006 -0.3888 -0.038" movable="1.0" />
+    <marker name="pRightTibialTub" body="tibia_r" pos="0.05 -0.07 0" movable="1.0" />
+    <marker name="pLeftLatMalleolus" body="tibia_l" pos="-0.005 -0.41 -0.053" movable="1.0" />
+    <marker name="pLeftMedMalleolus" body="tibia_l" pos="0.006 -0.3888 0.038" movable="1.0" />
+    <marker name="pLeftTibialTub" body="tibia_l" pos="0.05 -0.07 0" movable="1.0" />
+    <marker name="pRightHeelFoot" body="calcaneus_r" pos="-0.025 0 -0.005" movable="1.0" />
+    <marker name="pRightFirstMetatarsal" body="toes_r" pos="0.01 0 -0.05" movable="1.0" />
+    <marker name="pRightFifthMetatarsal" body="toes_r" pos="-0.035 0 0.058" movable="1.0" />
+    <marker name="pRightPivotFoot" body="toes_r" pos="-0.00128497 0 -0.180453" movable="1.0" />
+    <marker name="pRightHeelCenter" body="calcaneus_r" pos="0.0565423 0.0154926 0.00189644" movable="1.0" />
+    <marker name="pRightToe" body="toes_r" pos="0.0837604 0 0.0147577" movable="1.0" />
+    <marker name="pLeftHeelFoot" body="calcaneus_l" pos="-0.025 0 0.005" movable="1.0" />
+    <marker name="pLeftFirstMetatarsal" body="toes_l" pos="0.01 0 0.045" movable="1.0" />
+    <marker name="pLeftFifthMetatarsal" body="toes_l" pos="-0.0315592 0 -0.0588919" movable="1.0" />
+    <marker name="pLeftPivotFoot" body="toes_l" pos="-0.00717975 0 0.181128" movable="1.0" />
+    <marker name="pLeftHeelCenter" body="calcaneus_l" pos="0.057 0.0154926 0.00189644" movable="1.0" />
+    <marker name="pLeftToe" body="toes_l" pos="0.0822719 -0.00053803 -0.0167834" movable="1.0" />
+    <marker name="pRightASI" body="pelvis" pos="0.00976432 0.0101521 0.130998" movable="1.0" />
+    <marker name="pLeftASI" body="pelvis" pos="0.00611423 -0.00521842 -0.122318" movable="1.0" />
+</markers>

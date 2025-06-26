@@ -1,0 +1,392 @@
+<!-- =================================================
+Copyright (c) 2025 MyoLab, Inc. All Rights Reserved.
+This software and associated documentation files (the "Software") are the intellectual property of MyoLab, Inc. Unauthorized copying, modification, distribution, or use of this code, in whole or in part, without express written permission from the copyright owner is strictly prohibited.
+====================================================== -->
+<!-- Not compatible with MyoSkeleton v1.0.0 yet-->
+<mujocoinclude model="MyoSkeleton v1.0.0">
+  <asset>
+    <!-- Chest Muscles -->
+    <texture name="tex_ChestMaleMuscles_Material" type="2d" file="../textures/muscles/ChestMaleMuscles_Diffuse.png"/>
+    <material name="mat_ChestMaleMuscles_Material" texture="tex_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Deltoid_l.skn" name="skn_Deltoid_l" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Deltoid_r.skn" name="skn_Deltoid_r" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pectoralis_Major_clavicular_part_l.skn" name="skn_Pectoralis_Major_clavicular_part_l" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pectoralis_Major_clavicular_part_r.skn" name="skn_Pectoralis_Major_clavicular_part_r" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pectoralis_Major_l.skn" name="skn_Pectoralis_Major_l" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pectoralis_Major_r.skn" name="skn_Pectoralis_Major_r" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Neck_merged_muscles_1.skn" name="skn_neck_merged_muscles_1" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Platysma_l.skn" name="skn_Platysma_l" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pectoralis_Major_abdominal_part_l.skn" name="skn_Pectoralis_Major_abdominal_part_l" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Platysma_r.skn" name="skn_Platysma_r" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pectoralis_Major_abdominal_part_r.skn" name="skn_Pectoralis_Major_abdominal_part_r" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Digastric.skn" name="skn_Digastric" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Fibrous_loop_for_intermediate_digastric.skn" name="skn_Fibrous_loop_for_intermediate_digastric" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Genioglossus_Tongue_Muscles.skn" name="skn_Genioglossus_Tongue_Muscles" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Hyoglossus.skn" name="skn_Hyoglossus" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Longus_capitis.skn" name="skn_Longus_capitis" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Longus_colli.skn" name="skn_Longus_colli" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Mylohyoid.skn" name="skn_Mylohyoid" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Omohyoid.skn" name="skn_Omohyoid" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Scalene_anterior.skn" name="skn_Scalene_anterior" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Scalene_middle.skn" name="skn_Scalene_middle" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Scalene_posterior.skn" name="skn_Scalene_posterior" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Semispinalis_cervicis.skn" name="skn_Semispinalis_cervicis" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Semispinallis_capitis.skn" name="skn_Semispinallis_capitis" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Sternohyoid.skn" name="skn_Sternohyoid" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Sternothyroid.skn" name="skn_Sternothyroid" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Styloglossus.skn" name="skn_Styloglossus" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Stylohyoid.skn" name="skn_Stylohyoid" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Subclavian.skn" name="skn_Subclavian" material="mat_ChestMaleMuscles_Material" />
+    <skin file="../skins/muscles/Thyrohyoid.skn" name="skn_Thyrohyoid" material="mat_ChestMaleMuscles_Material" />
+
+    <!-- Abdominus Muscles -->
+    <texture name="tex_AbdominusMaleMuscles_Material" type="2d" file="../textures/muscles/AbdominusMaleMuscles_Diffuse.png" />
+    <material name="mat_AbdominusMaleMuscles_Material" texture="tex_AbdominusMaleMuscles_Material" />
+    <skin file="../skins/muscles/Serratus_anterior_l.skn" name="skn_Serratus_anterior_l" material="mat_AbdominusMaleMuscles_Material" />
+    <skin file="../skins/muscles/Serratus_anterior_r.skn" name="skn_Serratus_anterior_r" material="mat_AbdominusMaleMuscles_Material" />
+    <skin file="../skins/muscles/External_oblique.skn" name="skn_External_oblique" material="mat_AbdominusMaleMuscles_Material" />
+    <skin file="../skins/muscles/Rectus_abdominis.skn" name="skn_Rectus_abdominis" material="mat_AbdominusMaleMuscles_Material" />
+    <skin file="../skins/muscles/Diaphragm.skn" name="skn_Diaphragm" material="mat_AbdominusMaleMuscles_Material" />
+    <skin file="../skins/muscles/Iliacus.skn" name="skn_Iliacus" material="mat_AbdominusMaleMuscles_Material" />
+    <skin file="../skins/muscles/Psoas_minor.skn" name="skn_Psoas_minor" material="mat_AbdominusMaleMuscles_Material" />
+
+    <!-- Arms Muscles -->
+    <texture name="tex_ArmsMaleMuscles_Material" type="2d" file="../textures/muscles/ArmsMaleMuscles_Diffuse.png" />
+    <material name="mat_ArmsMaleMuscles_Material" texture="tex_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Biceps_l.skn" name="skn_Biceps_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Biceps_r.skn" name="skn_Biceps_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Supinator_l.skn" name="skn_Supinator_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Anconeus_l.skn" name="skn_Anconeus_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_carpi_ulnaris_l.skn" name="skn_Extensor_carpi_ulnaris_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_digitorum_l.skn" name="skn_Extensor_digitorum_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_digitorum_superficialis_l.skn" name="skn_Flexor_digitorum_superficialis_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Palmaris_longus_l.skn" name="skn_Palmaris_longus_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Triceps_lateral_head_l.skn" name="skn_Triceps_lateral_head_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Triceps_long_head_l.skn" name="skn_Triceps_long_head_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Triceps_Tendon_l.skn" name="skn_Triceps_Tendon_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Brachialis_l.skn" name="skn_Brachialis_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Coraco_brachialis_l.skn" name="skn_Coraco_brachialis_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Triceps_medial_head_l.skn" name="skn_Triceps_medial_head_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Abductor_pollicis_longus_l.skn" name="skn_Abductor_pollicis_longus_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_carpi_radialis_brevis_l.skn" name="skn_Extensor_carpi_radialis_brevis_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_carpi_radialis_longus_l.skn" name="skn_Extensor_carpi_radialis_longus_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_digiti_minimi_l.skn" name="skn_Extensor_digiti_minimi_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_carpi_ulnaris_l.skn" name="skn_Flexor_carpi_ulnaris_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_digitorum_profundus_l.skn" name="skn_Flexor_digitorum_profundus_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_pollicis_longus_l.skn" name="skn_Extensor_pollicis_longus_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_pollicis_longus_l.skn" name="skn_Flexor_pollicis_longus_l" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Supinator_r.skn" name="skn_Supinator_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Anconeus_r.skn" name="skn_Anconeus_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Brachioradialis_r.skn" name="skn_Brachioradialis_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_carpi_ulnaris_r.skn" name="skn_Extensor_carpi_ulnaris_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_digitorum_r.skn" name="skn_Extensor_digitorum_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_carpi_radialis_r.skn" name="skn_Flexor_carpi_radialis_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_digitorum_superficialis_r.skn" name="skn_Flexor_digitorum_superficialis_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Palmaris_longus_r.skn" name="skn_Palmaris_longus_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pronator_teres_r.skn" name="skn_Pronator_teres_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Triceps_lateral_head_r.skn" name="skn_Triceps_lateral_head_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Triceps_long_head_r.skn" name="skn_Triceps_long_head_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Triceps_Tendon_r.skn" name="skn_Triceps_Tendon_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Brachialis_r.skn" name="skn_Brachialis_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Coraco_brachialis_r.skn" name="skn_Coraco_brachialis_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Triceps_medial_head_r.skn" name="skn_Triceps_medial_head_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Abductor_pollicis_longus_r.skn" name="skn_Abductor_pollicis_longus_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_carpi_radialis_brevis_r.skn" name="skn_Extensor_carpi_radialis_brevis_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_carpi_radialis_longus_r.skn" name="skn_Extensor_carpi_radialis_longus_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_digiti_minimi_r.skn" name="skn_Extensor_digiti_minimi_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_carpi_ulnaris_r.skn" name="skn_Flexor_carpi_ulnaris_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_digitorum_profundus_r.skn" name="skn_Flexor_digitorum_profundus_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_pollicis_longus_r.skn" name="skn_Extensor_pollicis_longus_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_pollicis_longus_r.skn" name="skn_Flexor_pollicis_longus_r" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_indicis.skn" name="skn_Extensor_indicis" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_digitorum_intertendinous.skn" name="skn_Extensor_digitorum_intertendinous" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_pollicis_brevis.skn" name="skn_Extensor_pollicis_brevis" material="mat_ArmsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pronator_quadratus.skn" name="skn_Pronator_quadratus" material="mat_ArmsMaleMuscles_Material" />
+
+    <!-- Back Muscles -->
+    <texture name="tex_BackMaleMuscles_Material" type="2d" file="../textures/muscles/BackMaleMuscles_Diffuse.png" />
+    <material name="mat_BackMaleMuscles_Material" texture="tex_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Neck_merged_muscles_2.skn" name="skn_neck_merged_muscles_2" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Infra_spinatus_l.skn" name="skn_Infra_spinatus_l" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Subscapularis_l.skn" name="skn_Subscapularis_l" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Teres_major_l.skn" name="skn_Teres_major_l" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Teres_minor_l.skn" name="skn_Teres_minor_l" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Supra_spinatus_l.skn" name="skn_Supra_spinatus_l" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Infra_spinatus_r.skn" name="skn_Infra_spinatus_r" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Subscapularis_r.skn" name="skn_Subscapularis_r" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Teres_major_r.skn" name="skn_Teres_major_r" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Teres_minor_r.skn" name="skn_Teres_minor_r" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Supra_spinatus_r.skn" name="skn_Supra_spinatus_r" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Latissimus_dorsi.skn" name="skn_Latissimus_dorsi" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Rhomboid_major.skn" name="skn_Rhomboid_major" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Trapezius.skn" name="skn_Trapezius" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Interspinales_cervicis.skn" name="skn_Interspinales_cervicis" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Interspinales_lumborum.skn" name="skn_Interspinales_lumborum" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Intertransversarii_laterales_lumborum.skn" name="skn_Intertransversarii_laterales_lumborum" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Longissimus_capitis.skn" name="skn_Longissimus_capitis" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Longissimus_cervicis.skn" name="skn_Longissimus_cervicis" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Quadratus_lumborum.skn" name="skn_Quadratus_lumborum" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Rectus_capitis_anterior.skn" name="skn_Rectus_capitis_anterior" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Rectus_capitis_lateralis.skn" name="skn_Rectus_capitis_lateralis" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Rectus_capitis_posterior_major.skn" name="skn_Rectus_capitis_posterior_major" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Rectus_capitis_posterior_minor.skn" name="skn_Rectus_capitis_posterior_minor" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Rotatores.skn" name="skn_Rotatores" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Semispinales_thoracis.skn" name="skn_Semispinales_thoracis" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Serratus_posterior_superior.skn" name="skn_Serratus_posterior_superior" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Spinalis_cervicis.skn" name="skn_Spinalis_cervicis" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Spinalis_thoracis.skn" name="skn_Spinalis_thoracis" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Splenius_cervicis.skn" name="skn_Splenius_cervicis" material="mat_BackMaleMuscles_Material" />
+    <skin file="../skins/muscles/Rhomboid_minor.skn" name="skn_Rhomboid_minor" material="mat_BackMaleMuscles_Material" />
+
+    <!-- Hand and Foot Muscles -->
+    <texture name="tex_HandsFootsMaleMuscles_Material" type="2d" file="../textures/muscles/HandsFootsMaleMuscles_Diffuse.png" />
+    <material name="mat_HandsFootsMaleMuscles_Material" texture="tex_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Abductor_digiti_minimi_Foot_l.skn" name="skn_Abductor_digiti_minimi_Foot_l" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Abductor_digiti_minimi_Hand.skn" name="skn_Abductor_digiti_minimi_Hand" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Abductor_hallucis_l.skn" name="skn_Abductor_hallucis_l" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_digitorum_brevis_l.skn" name="skn_Extensor_digitorum_brevis_l" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_hallucis_brevis_l.skn" name="skn_Extensor_hallucis_brevis_l" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_digitorum_brevis_l.skn" name="skn_Flexor_digitorum_brevis_l" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Bicipal_aponeurosis_l.skn" name="skn_Bicipal_aponeurosis_l" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Abductor_digiti_minimi_Foot_r.skn" name="skn_Abductor_digiti_minimi_Foot_r" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Abductor_hallucis_r.skn" name="skn_Abductor_hallucis_r" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_digitorum_brevis_r.skn" name="skn_Extensor_digitorum_brevis_r" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_hallucis_brevis_r.skn" name="skn_Extensor_hallucis_brevis_r" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_digitorum_brevis_r.skn" name="skn_Flexor_digitorum_brevis_r" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Bicipal_aponeurosis_r.skn" name="skn_Bicipal_aponeurosis_r" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Adductor_hallucis_oblique_head.skn" name="skn_Adductor_hallucis_oblique_head" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Adductor_hallucis_transverse_head.skn" name="skn_Adductor_hallucis_transverse_head" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Adductor_pollicis.skn" name="skn_Adductor_pollicis" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Arytaenoideus transversus.skn" name="skn_Arytaenoideus transversus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Cartilago thyroid.skn" name="skn_Cartilago thyroid" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Constrictor pharyngis inferior.skn" name="skn_Constrictor pharyngis inferior" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Constrictor pharyngis middle.skn" name="skn_Constrictor pharyngis middle" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Constrictor pharyngis superior.skn" name="skn_Constrictor pharyngis superior" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Cricoarytaenoideus lateralis.skn" name="skn_Cricoarytaenoideus lateralis" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Cricoarytaenoideus posterior.skn" name="skn_Cricoarytaenoideus posterior" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Deep_transverse_perineal.skn" name="skn_Deep_transverse_perineal" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Dorsal_interosseus.skn" name="skn_Dorsal_interosseus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/First_dorsal_interosseus.skn" name="skn_First_dorsal_interosseus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/First_lumbrical.skn" name="skn_First_lumbrical" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/First_palmar_interosseus.skn" name="skn_First_palmar_interosseus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/First_through_fourth_lumbricals.skn" name="skn_First_through_fourth_lumbricals" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_pollicis_brevis.skn" name="skn_Flexor_pollicis_brevis" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Fourth_dorsal_interosseus.skn" name="skn_Fourth_dorsal_interosseus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Fourth_lumbrical.skn" name="skn_Fourth_lumbrical" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Iliococcygeus.skn" name="skn_Iliococcygeus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Interosseous_dorsal.skn" name="skn_Interosseous_dorsal" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Interosseous_plantar.skn" name="skn_Interosseous_plantar" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Ishio_cavernosus.skn" name="skn_Ishio_cavernosus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Musculus_aryepiglotticus.skn" name="skn_Musculus_aryepiglotticus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Musculus_thyroarytenoideus.skn" name="skn_Musculus_thyroarytenoideus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Musculus_thyroepiglotticus.skn" name="skn_Musculus_thyroepiglotticus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Opponens_digiti_minimi_Foot.skn" name="skn_Opponens_digiti_minimi_Foot" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Opponens_digiti_minimi_Hand.skn" name="skn_Opponens_digiti_minimi_Hand" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Opponens_pollicis.skn" name="skn_Opponens_pollicis" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Palmaris_brevis.skn" name="skn_Palmaris_brevis" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pars_cricopharyngea.skn" name="skn_Pars_cricopharyngea" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pars_obliqua.skn" name="skn_Pars_obliqua" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pars_recta.skn" name="skn_Pars_recta" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Quadratus_plantae.skn" name="skn_Quadratus_plantae" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Puborectalis.skn" name="skn_Puborectalis" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Second_dorsal_interosseus.skn" name="skn_Second_dorsal_interosseus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Second_lumbrical.skn" name="skn_Second_lumbrical" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Second_palmar_interosseus.skn" name="skn_Second_palmar_interosseus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Superficial_transverse_perineal.skn" name="skn_Superficial_transverse_perineal" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Third_dorsal_interosseus.skn" name="skn_Third_dorsal_interosseus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Third_lumbrical.skn" name="skn_Third_lumbrical" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Third_palmar_interosseus.skn" name="skn_Third_palmar_interosseus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Thyroarytenoid_muscle.skn" name="skn_Thyroarytenoid_muscle" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Stylopharyngeus.skn" name="skn_Stylopharyngeus" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_digiti_minimi_Foot.skn" name="skn_Flexor_digiti_minimi" material="mat_HandsFootsMaleMuscles_Material"/>
+    <skin file="../skins/muscles/Flexor_digiti_minimi_Hand.skn" name="skn_Flexor_digiti_minimi_Hand" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Abductor_pollicis_brevis.skn" name="skn_Abductor_pollicis_brevis" material="mat_HandsFootsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_hallucis_brevis.skn" name="skn_Flexor_hallucis_brevis" material="mat_HandsFootsMaleMuscles_Material" />
+
+    <!-- Legs Muscles -->
+    <texture name="tex_LegsMaleMuscles_Material" type="2d" file="../textures/muscles/LegsMaleMuscles_Diffuse.png" />
+    <material name="mat_LegsMaleMuscles_Material" texture="tex_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Achilles_tendon_l.skn" name="skn_Achilles_tendon_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Adductor_longus_l.skn" name="skn_Adductor_longus_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Biceps_femoralis_l.skn" name="skn_Biceps_femoralis_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_digitorum_longus_l.skn" name="skn_Extensor_digitorum_longus_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_hallucis_longus_l.skn" name="skn_Extensor_hallucis_longus_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Fibularis_peroneus_brevis_l.skn" name="skn_Fibularis_peroneus_brevis_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Fibularis_peroneus_longus_l.skn" name="skn_Fibularis_peroneus_longus_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_digitorum_longus_l.skn" name="skn_Flexor_digitorum_longus_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_hallucis_longus_l.skn" name="skn_Flexor_hallucis_longus_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Gastrocnemius_lateral_head_l.skn" name="skn_Gastrocnemius_lateral_head_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Gastrocnemius_medial_head_l.skn" name="skn_Gastrocnemius_medial_head_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Gracilis_l.skn" name="skn_Gracilis_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Iliotibial_tract_l.skn" name="skn_Iliotibial_tract_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Plantaris_l.skn" name="skn_Plantaris_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Rectus_femoris_l.skn" name="skn_Rectus_femoris_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Sartorius_l.skn" name="skn_Sartorius_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Semi_membranosus_l.skn" name="skn_Semi_membranosus_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Semi_tendinosus_l.skn" name="skn_Semi_tendinosus_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Soleus_l.skn" name="skn_Soleus_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Tensor_fascia_lata_l.skn" name="skn_Tensor_fascia_lata_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Tibialis_anterior_l.skn" name="skn_Tibialis_anterior_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Tibialis_posterior_l.skn" name="skn_Tibialis_posterior_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Vastus_intermedius_l.skn" name="skn_Vastus_intermedius_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Vastus_lateralis_l.skn" name="skn_Vastus_lateralis_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Vastus_medialis_l.skn" name="skn_Vastus_medialis_l" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Achilles_tendon_r.skn" name="skn_Achilles_tendon_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Adductor_longus_r.skn" name="skn_Adductor_longus_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Biceps_femoralis_r.skn" name="skn_Biceps_femoralis_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_digitorum_longus_r.skn" name="skn_Extensor_digitorum_longus_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Extensor_hallucis_longus_r.skn" name="skn_Extensor_hallucis_longus_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Fibularis_peroneus_brevis_r.skn" name="skn_Fibularis_peroneus_brevis_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Fibularis_peroneus_longus_r.skn" name="skn_Fibularis_peroneus_longus_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_digitorum_longus_r.skn" name="skn_Flexor_digitorum_longus_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Flexor_hallucis_longus_r.skn" name="skn_Flexor_hallucis_longus_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Gastrocnemius_lateral_head_r.skn" name="skn_Gastrocnemius_lateral_head_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Gastrocnemius_medial_head_r.skn" name="skn_Gastrocnemius_medial_head_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Gracilis_r.skn" name="skn_Gracilis_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Iliotibial_tract_r.skn" name="skn_Iliotibial_tract_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Plantaris_r.skn" name="skn_Plantaris_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Rectus_femoris_r.skn" name="skn_Rectus_femoris_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Sartorius_r.skn" name="skn_Sartorius_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Semi_membranosus_r.skn" name="skn_Semi_membranosus_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Semi_tendinosus_r.skn" name="skn_Semi_tendinosus_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Soleus_r.skn" name="skn_Soleus_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Tensor_fascia_lata_r.skn" name="skn_Tensor_fascia_lata_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Tibialis_anterior_r.skn" name="skn_Tibialis_anterior_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Tibialis_posterior_r.skn" name="skn_Tibialis_posterior_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Vastus_intermedius_r.skn" name="skn_Vastus_intermedius_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Vastus_lateralis_r.skn" name="skn_Vastus_lateralis_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Vastus_medialis_r.skn" name="skn_Vastus_medialis_r" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Gluteus_maximus.skn" name="skn_Gluteus_maximus" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Gluteus_medius.skn" name="skn_Gluteus_medius" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Biceps_femoris_short_head.skn" name="skn_Biceps_femoris_short_head" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Pectineus.skn" name="skn_Pectineus" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Popliteus.skn" name="skn_Popliteus" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Adductor_magnus.skn" name="skn_Adductor_magnus" material="mat_LegsMaleMuscles_Material" />
+    <skin file="../skins/muscles/Fibularis_peroneus_tertius.skn" name="skn_Fibularis_peroneus_tertius" material="mat_LegsMaleMuscles_Material" />
+
+    <!-- Head Muscles -->
+    <texture name="tex_HeadMaleMuscles_Material" type="2d" file="../textures/muscles/HeadMaleMuscles_Diffuse.png" />
+    <material name="mat_HeadMaleMuscles_Material" texture="tex_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Alar_nasalis.skn" name="skn_Alar_nasalis" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Auricularis_posterior.skn" name="skn_Auriculari_posterior" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Buccinator.skn" name="skn_Buccinator" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Compressor_narium_minor.skn" name="skn_Compressor_narium_minor" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Corrugator_supercilii.skn" name="skn_Corrugator_supercilii" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Depressor_septi.skn" name="skn_Depressor_septi" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Dilator_naris_anterior.skn" name="skn_Dilator_naris_anterior" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/External_lateral_pterygoid.skn" name="skn_External_lateral_pterygyoid" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Geniohyoid.skn" name="skn_Geniohyoid" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Head_merged_muscles_0.skn" name="skn_Head_merged_muscles_0" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Head_merged_muscles_1.skn" name="skn_Head_merged_muscles_1" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Head_merged_muscles_2.skn" name="skn_Head_merged_muscles_2" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Inferior_oblique.skn" name="skn_Inferior_oblique" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Inferior_rectus.skn" name="skn_Inferior_rectus" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Internal_medial_pterygoid.skn" name="skn_Internal_medial_pterygoid" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Lateral_rectus.skn" name="skn_Lateral_rectus" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Levator_anguli_oris.skn" name="skn_Levator_anguli" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Levator_palpebrae.skn" name="skn_Levator_palpebrae" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Medial_rectus.skn" name="skn_Medial_rectus" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Nasal_lower_cartilage.skn" name="skn_Nasal_lower_cartilage" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Risorius.skn" name="skn_Risorius" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Superior_oblique.skn" name="skn_Superior_oblique" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Superior_rectus.skn" name="skn_Superior_rectus" material="mat_HeadMaleMuscles_Material" />
+    <skin file="../skins/muscles/Trochlea.skn" name="skn_Trochlea" material="mat_HeadMaleMuscles_Material" />
+
+    <!-- Ligaments -->
+    <texture name="tex_Ligaments_material" type="2d" file="../textures/muscles/Ligaments_Diffuse.png" />
+    <material name="mat_Ligaments_Material" texture="tex_Ligaments_material" />
+    <skin file="../skins/muscles/Alar_ligaments.skn" name="skn_Alar_ligaments" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Anterior_cruciate_ligament.skn" name="skn_Anterior_cruciate_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Anterior_Longitudinal_Ligament.skn" name="skn_Anterior_Longitudinal_Ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Anterior_radiocollateral_ligament_l.skn" name="skn_Anterior_radiocollateral_ligament_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Anterior_radiocollateral_ligament_r.skn" name="skn_Anterior_radiocollateral_ligament_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Anterior_talofibular_ligament.skn" name="skn_Anterior_talofibular_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Anterior_tibiofibular_ligament.skn" name="skn_Anterior_tibiofibular_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Anular_Ligament_Fingers.skn" name="skn_Anular_Ligament_Fingers" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Anular_ligament_l.skn" name="skn_Anular_ligament_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Anular_ligament_r.skn" name="skn_Anular_ligament_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Arcuate_popliteal_ligament.skn" name="skn_Arcuate_popliteal_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Calcaneo_fibular_ligament.skn" name="skn_Calcaneo_fibular_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Conoid_ligament.skn" name="skn_Conoid_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Coracoacromial_ligament.skn" name="skn_Coracoacromial_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Coracohumeral_ligament.skn" name="skn_Coracohumeral_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Deep_transverse_metacarpal_ligaments.skn" name="skn_Deep_transverse_metacarpal_ligaments" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Distal_interphalangeal_joint.skn" name="skn_Distal_interphalangeal_joint" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Dorsal_aponeurosis_l.skn" name="skn_Dorsal_aponeurosis_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Dorsal_aponeurosis_r.skn" name="skn_Dorsal_aponeurosis_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Dorsal_carpometacarpal_ligaments.skn" name="skn_Dorsal_carpometacarpal_ligaments" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Dorsal_digital_expansion.skn" name="skn_Dorsal_digital_expansion" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Dorsal_intercarpal_ligaments.skn" name="skn_Dorsal_intercarpal_ligaments" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Dorsal_metatarsal_ligaments.skn" name="skn_Dorsal_metatarsal_ligaments" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Dorsal_radiocarpal_ligament.skn" name="skn_Dorsal_radiocarpal_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Dorsal_radioulnar_ligament.skn" name="skn_Dorsal_radioulnar_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Dorsal_radioulnar_ligament001.skn" name="skn_Dorsal_radioulnar_ligament001" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Elbow_ligament_l.skn" name="skn_Elbow_ligament_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Elbow_ligament_r.skn" name="skn_Elbow_ligament_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Extensor_retinaculum.skn" name="skn_Extensor_retinaculum" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Fibular_collateral_ligament.skn" name="skn_Fibular_collateral_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Fibular_head_ligament.skn" name="skn_Fibular_head_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Flexor_retinaculum_Foot_l.skn" name="skn_Flexor_retinaculum_Foot_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Flexor_retinaculum_Foot_r.skn" name="skn_Flexor_retinaculum_Foot_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Flexor_retinaculum_hand.skn" name="skn_Flexor_retinaculum_hand" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Inferior_extensor_retinaculum_l.skn" name="skn_Inferior_extensor_retinaculum_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Inferior_extensor_retinaculum_r.skn" name="skn_Inferior_extensor_retinaculum_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Inferior_fibular_retinaculum.skn" name="skn_Inferior_fibular_retinaculum" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Inguinal_ligament.skn" name="skn_Inguinal_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Interosseous_membrane_arm_l.skn" name="skn_Interosseous_membrane_arm_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Interosseous_membrane_arm_r.skn" name="skn_Interosseous_membrane_arm_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Interosseous_membrane_leg_l.skn" name="skn_Interosseous_membrane_leg_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Interosseous_membrane_leg_r.skn" name="skn_Interosseous_membrane_leg_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Interspinous_ligament.skn" name="skn_Interspinous_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Intertransverse_ligament.skn" name="skn_Intertransverse_ligament" material="mat_Ligaments_Material" />
+
+    <!-- <skin file="../skins/muscles/Joint_capsul_e.skn" name="skn_Joint_capsul_e" material="mat_Ligaments_Material" /> -->
+
+    <skin file="../skins/muscles/Joint_capsule_l.skn" name="skn_Joint_capsule_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Joint_capsule_r.skn" name="skn_Joint_capsule_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Knee_joint_capsule.skn" name="skn_Knee_joint_capsule" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Ligament_Flavum.skn" name="skn_Ligament_Flavum" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Long_plantar_ligament.skn" name="skn_Long_plantar_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Medial_meniscus.skn" name="skn_Medial_meniscus" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Metacarpophalangeal_joint.skn" name="skn_Metacarpophalangeal_joint" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Metatarsophalangeal_distal_joint_capsule.skn" name="skn_Metatarsophalangeal_distal_joint_capsule" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Metatarsophalangeal_medial_joint_capsule.skn" name="skn_Metatarsophalangeal_medial_joint_capsule" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Metatarsophalangeal_joint_capsule.skn" name="skn_Metatarsophalangeal_joint_capsule" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Nuchal_ligament.skn" name="skn_Nuchal_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Oblique_popliteal_ligament.skn" name="skn_Oblique_popliteal_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Palmar_metacarpal_ligaments.skn" name="skn_Palmar_metacarpal_ligaments" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Palmar_radioulnar_ligament.skn" name="skn_Palmar_radioulnar_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Plantar_aponeurosis_l.skn" name="skn_Plantar_aponeurosis_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Plantar_aponeurosis_r.skn" name="skn_Plantar_aponeurosis_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Posterior_atlanto_occipital_membrane.skn" name="skn_Posterior_atlanto_occipital_membrane" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Posterior_cruciate_ligament.skn" name="skn_Posterior_cruciate_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Posterior_longitudinal_ligament.skn" name="skn_Posterior_longitudinal_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Posterior_talofibular_ligament.skn" name="skn_Posterior_talofibular_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Posterior_tibiofibular_ligament.skn" name="skn_Posterior_tibiofibular_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Proximal_interphalangeal_joint.skn" name="skn_Proximal_interphalangeal_joint" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Radial_carpal_collateral_ligament.skn" name="skn_Radial_carpal_collateral_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Radial_collateral_ligament_l.skn" name="skn_Radial_collateral_ligament_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Radial_collateral_ligament_r.skn" name="skn_Radial_collateral_ligament_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Sacroiliac_ligaments.skn" name="skn_Sacroiliac_ligaments" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Sternoclavicular_ligament.skn" name="skn_Sternoclavicular_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Superior_extensor_retinaculum.skn" name="skn_Superior_extensor_retinaculum" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Superior_fibular_retinaculum.skn" name="skn_Superior_fibular_retinaculum" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Supraspinous_ligament.skn" name="skn_Supraspinous_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Tectorial_membrane.skn" name="skn_Tectorial_membrane" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Transverse_humeral_ligament_l.skn" name="skn_Transverse_humeral_ligament_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Transverse_humeral_ligament_r.skn" name="skn_Transverse_humeral_ligament_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Transverse_ligament_knee.skn" name="skn_Transverse_ligament_knee" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Transverse_ligament_of_atlas.skn" name="skn_Transverse_ligament_of_atlas" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Transverse_ligament_of_humerus_l.skn" name="skn_Transverse_ligament_of_humerus_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Transverse_ligament_of_humerus_r.skn" name="skn_Transverse_ligament_of_humerus_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Transverse_metatarsal_ligaments.skn" name="skn_Transverse_metatarsal_ligaments" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Trapezoid_ligament.skn" name="skn_Trapezoid_ligament" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Ulnar_collateral_ligament_anterior_l.skn" name="skn_Ulnar_collateral_ligament_anterior_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Ulnar_collateral_ligament_anterior_r.skn" name="skn_Ulnar_collateral_ligament_anterior_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Ulnar_collateral_ligament_posterior_l.skn" name="skn_Ulnar_collateral_ligament_posterior_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Ulnar_collateral_ligament_posterior_r.skn" name="skn_Ulnar_collateral_ligament_posterior_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Ulnar_collateral_ligament_transverse_l.skn" name="skn_Ulnar_collateral_ligament_transverse_l" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Ulnar_collateral_ligament_transverse_r.skn" name="skn_Ulnar_collateral_ligament_transverse_r" material="mat_Ligaments_Material" />
+    <skin file="../skins/muscles/Lateral_meniscus.skn" name="skn_Lateral_meniscus" material="mat_Ligaments_Material" />
+  </asset>
+</mujocoinclude>

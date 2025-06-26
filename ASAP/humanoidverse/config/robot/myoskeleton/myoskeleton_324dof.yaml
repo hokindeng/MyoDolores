@@ -1,0 +1,252 @@
+# @package _global_
+
+defaults:
+  - robot_base
+
+robot:
+  # Observation parameters for MyoSkeleton
+  num_bodies: 100  # Approximate number of bodies in MyoSkeleton
+  dof_obs_size: 324  # Full 324 DOF
+  actions_dim: 324
+  lower_body_actions_dim: 200  # Approximate for spine + legs + pelvis
+  upper_body_actions_dim: 124  # Approximate for arms + hands + neck
+  policy_obs_dim: -1
+  critic_obs_dim: -1
+
+  key_bodies: ["calcaneous_l", "calcaneous_r"]  # Foot bodies
+  contact_bodies: ["calcaneous_l", "calcaneous_r"]
+  num_feet: 2
+  right_foot_name: "calcaneous_r"
+  left_foot_name: "calcaneous_l"
+  foot_name: "calcaneous"
+  knee_name: "femur"
+  has_torso: True
+  torso_name: "l1"  # L1 vertebra as torso reference
+  has_upper_body_dof: True
+
+  # Core joint names for locomotion (simplified for initial training)
+  dof_names: [
+    # Spine (core stability)
+    'l5_s1_flex', 'l5_s1_bend', 'l5_s1_arot',
+    'l4_l5_flex', 'l4_l5_bend', 'l4_l5_arot',
+    'l3_l4_flex', 'l3_l4_bend', 'l3_l4_arot',
+    'l2_l3_flex', 'l2_l3_bend', 'l2_l3_arot',
+    'l1_l2_flex', 'l1_l2_bend', 'l1_l2_arot',
+    't12_l1_flex', 't12_l1_bend', 't12_l1_arot',
+    'c7_t1_flex', 'c7_t1_bend', 'c7_t1_arot',
+    
+    # Left leg
+    'hip_flex_l', 'hip_abdu_l', 'hip_arot_l',
+    'knee_flex_l', 'knee_abdu_l', 'knee_arot_l',
+    'ankle_flex_l', 'subtal_inve_l', 'mtp_flex_l',
+    
+    # Right leg  
+    'hip_flex_r', 'hip_abdu_r', 'hip_arot_r',
+    'knee_flex_r', 'knee_abdu_r', 'knee_arot_r', 
+    'ankle_flex_r', 'subtal_inve_r', 'mtp_flex_r',
+    
+    # Left arm (simplified)
+    'humerus_plan_l', 'humerus_elev_l', 'humerus_arot_l',
+    'elbow_flex_l', 'wrist_flex_l',
+    
+    # Right arm (simplified)
+    'humerus_plan_r', 'humerus_elev_r', 'humerus_arot_r', 
+    'elbow_flex_r', 'wrist_flex_r'
+  ]
+
+  # Simplified joint limits for initial training (will need refinement)
+  dof_pos_lower_limit_list: [
+    # Spine limits (in radians, -30 to 30 degrees typical)
+    -0.52, -0.52, -0.52, -0.52, -0.52, -0.52, -0.52, -0.52, -0.52,
+    -0.52, -0.52, -0.52, -0.52, -0.52, -0.52, -0.52, -0.52, -0.52,
+    -0.52, -0.52, -0.52,
+    # Left leg limits
+    -1.57, -0.79, -1.57, -2.09, -0.52, -0.52, -0.79, -0.52, -0.52,
+    # Right leg limits  
+    -1.57, -0.79, -1.57, -2.09, -0.52, -0.52, -0.79, -0.52, -0.52,
+    # Left arm limits
+    -3.14, -1.57, -3.14, -2.62, -1.57,
+    # Right arm limits
+    -3.14, -1.57, -3.14, -2.62, -1.57
+  ]
+
+  dof_pos_upper_limit_list: [
+    # Spine limits
+    0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52,
+    0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52,
+    0.52, 0.52, 0.52,
+    # Left leg limits
+    1.57, 0.79, 1.57, 0.17, 0.52, 0.52, 0.79, 0.52, 0.52,
+    # Right leg limits
+    1.57, 0.79, 1.57, 0.17, 0.52, 0.52, 0.79, 0.52, 0.52,
+    # Left arm limits  
+    3.14, 1.57, 3.14, 0.17, 1.57,
+    # Right arm limits
+    3.14, 1.57, 3.14, 0.17, 1.57
+  ]
+
+  # Velocity limits (rad/s)
+  dof_vel_limit_list: [
+    # Spine (slower movement)
+    10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0,
+    10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0,
+    10.0, 10.0, 10.0,
+    # Left leg
+    20.0, 20.0, 20.0, 25.0, 15.0, 15.0, 25.0, 20.0, 15.0,
+    # Right leg
+    20.0, 20.0, 20.0, 25.0, 15.0, 15.0, 25.0, 20.0, 15.0,
+    # Left arm
+    30.0, 30.0, 30.0, 35.0, 25.0,
+    # Right arm  
+    30.0, 30.0, 30.0, 35.0, 25.0
+  ]
+
+  # Effort limits (matching MyoSkeleton motor specifications)
+  dof_effort_limit_list: [
+    # Spine (250N from motor config)
+    250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0,
+    250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0,
+    250.0, 250.0, 250.0,
+    # Legs (higher torque for locomotion)
+    250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0,
+    250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0, 250.0,
+    # Arms
+    250.0, 250.0, 250.0, 250.0, 250.0,
+    250.0, 250.0, 250.0, 250.0, 250.0
+  ]
+
+  terminate_after_contacts_on: ["pelvis", "l1", "humerus_l", "humerus_r"]
+  penalize_contacts_on: ["pelvis", "l1", "humerus_l", "humerus_r"]
+
+  init_state:
+    pos: [0.0, 0.0, 1.7]  # MyoSkeleton is taller than typical robots
+    rot: [0.0, 0.0, 0.0, 1.0]
+    lin_vel: [0.0, 0.0, 0.0]
+    ang_vel: [0.0, 0.0, 0.0]
+    default_joint_angles:  # Neutral pose for MyoSkeleton
+      # Spine in neutral
+      l5_s1_flex: 0.0
+      l5_s1_bend: 0.0  
+      l5_s1_arot: 0.0
+      l4_l5_flex: 0.0
+      l4_l5_bend: 0.0
+      l4_l5_arot: 0.0
+      l3_l4_flex: 0.0
+      l3_l4_bend: 0.0
+      l3_l4_arot: 0.0
+      l2_l3_flex: 0.0
+      l2_l3_bend: 0.0
+      l2_l3_arot: 0.0
+      l1_l2_flex: 0.0
+      l1_l2_bend: 0.0
+      l1_l2_arot: 0.0
+      t12_l1_flex: 0.0
+      t12_l1_bend: 0.0
+      t12_l1_arot: 0.0
+      c7_t1_flex: 0.0
+      c7_t1_bend: 0.0
+      c7_t1_arot: 0.0
+      # Left leg in standing pose
+      hip_flex_l: -0.1
+      hip_abdu_l: 0.0
+      hip_arot_l: 0.0
+      knee_flex_l: 0.2
+      knee_abdu_l: 0.0
+      knee_arot_l: 0.0
+      ankle_flex_l: -0.1
+      subtal_inve_l: 0.0
+      mtp_flex_l: 0.0
+      # Right leg in standing pose
+      hip_flex_r: -0.1
+      hip_abdu_r: 0.0
+      hip_arot_r: 0.0
+      knee_flex_r: 0.2
+      knee_abdu_r: 0.0
+      knee_arot_r: 0.0
+      ankle_flex_r: -0.1
+      subtal_inve_r: 0.0
+      mtp_flex_r: 0.0
+      # Arms at sides
+      humerus_plan_l: 0.0
+      humerus_elev_l: 0.0
+      humerus_arot_l: 0.0
+      elbow_flex_l: 0.0
+      wrist_flex_l: 0.0
+      humerus_plan_r: 0.0
+      humerus_elev_r: 0.0
+      humerus_arot_r: 0.0
+      elbow_flex_r: 0.0
+      wrist_flex_r: 0.0
+
+  control:
+    control_type: P
+    stiffness:  # Adjusted for MyoSkeleton biomechanics
+      spine: 100.0
+      hip: 150.0
+      knee: 200.0
+      ankle: 50.0
+      shoulder: 80.0
+      elbow: 60.0
+      wrist: 30.0
+      
+    damping:
+      spine: 5.0
+      hip: 7.5
+      knee: 10.0
+      ankle: 2.0
+      shoulder: 4.0
+      elbow: 3.0
+      wrist: 1.5
+
+    action_scale: 0.25
+    action_clip_value: 100.0
+    clip_torques: True
+
+  asset:
+    collapse_fixed_joints: False  # Keep biomechanical detail
+    replace_cylinder_with_capsule: True
+    flip_visual_attachments: False
+    armature: 0.001
+    thickness: 0.01
+    max_angular_velocity: 1000.
+    max_linear_velocity: 1000.
+    density: 0.001
+    angular_damping: 0.
+    linear_damping: 0.
+
+    xml_file: "myoskeleton/myoskeleton_with_motors.xml"
+    robot_type: myoskeleton_324dof
+    self_collisions: 0  # Enable self collisions for realistic biomechanics
+    default_dof_drive_mode: 3
+    fix_base_link: False
+
+  motion:
+    motion_file: 'humanoidverse/data/motions/myoskeleton/walking_basic.pkl'
+    
+    humanoid_type: myoskeleton_324dof
+    bias_offset: False
+    has_self_collision: True
+    has_mesh: False
+    has_jt_limit: True
+    has_dof_subset: True
+    has_upright_start: True
+    remove_toe: False
+    motion_sym_loss: False
+    masterfoot: False
+    freeze_toe: False
+    freeze_hand: True  # Start with hands frozen for stability
+    box_body: True
+    real_weight: True
+    real_weight_porpotion_capsules: True
+    real_weight_porpotion_boxes: True
+
+    # Key body tracking for MyoSkeleton
+    pelvis_link: "pelvis"
+    base_link: "l1"  # L1 vertebra as torso
+    
+    motion_tracking_link:
+      - "hand_l"
+      - "hand_r" 
+      - "head"
+      - "calcaneous_l"
+      - "calcaneous_r" 

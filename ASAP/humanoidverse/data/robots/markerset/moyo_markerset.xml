@@ -1,0 +1,39 @@
+<!-- =================================================
+Copyright (c) 2025 MyoLab, Inc. All Rights Reserved.
+This software and associated documentation files (the "Software") are the intellectual property of MyoLab, Inc. Unauthorized copying, modification, distribution, or use of this code, in whole or in part, without express written permission from the copyright owner is strictly prohibited.
+====================================================== -->
+<markers name="MOYO" model="MyoSkeleton v1.0.0">
+    <marker body="thoracic_spine" name="C7" pos="-0.049000 0.294000 0.000000" movable="1.0" confidence="0.8"/>
+    <marker body="thoracic_spine" name="T10" pos="-0.069674 0.064988 0.003366" movable="1.0" confidence="0.8"/>
+    <marker body="thoracic_spine" name="CLAV" pos="0.078400 0.245000 0.001263" movable="1.0" confidence="0.8"/>
+    <marker body="thoracic_spine" name="STRN" pos="0.147000 0.078400 0.000000" movable="1.0" confidence="0.8"/>
+
+    <marker body="scapula_l" name="LSHO" pos="0.000000 0.009800 0.000000" movable="1.0" confidence="0.8"/>
+    <marker body="humerus_l" name="LELB" pos="0.006873 -0.291541 -0.053172" movable="0.0" confidence="1.0"/>
+
+    <marker body="radius_l" name="LWRA" pos="0.052925 -0.216925 -0.029719" movable="0.0" confidence="1.0"/>
+    <marker body="ulna_l" name="LWRB" pos="-0.015223 -0.235010 -0.054460" movable="0.0" confidence="1.0"/>
+
+    <marker body="scapula_r" name="RSHO" pos="0.000000 0.009800 0.000000" movable="1.0" confidence="0.8"/>
+    <marker body="humerus_r" name="RELB" pos="0.004153 -0.287482 0.043653" movable="0.0" confidence="1.0"/>
+
+    <marker body="radius_r" name="RWRA" pos="0.052925 -0.216925 0.029719" movable="0.0" confidence="1.0"/>
+    <marker body="ulna_r" name="RWRB" pos="-0.015223 -0.235010 0.054460" movable="0.0" confidence="1.0"/>
+
+    <marker body="pelvis" name="LASI" pos="0.007604 0.014992 -0.117262" movable="0.0" confidence="1.0"/>
+    <marker body="pelvis" name="RASI" pos="0.006503 0.018310 0.113536" movable="0.0" confidence="1.0"/>
+    <marker body="pelvis" name="LPSI" pos="-0.151844 0.049875 -0.033176" movable="1.0" confidence="0.8"/>
+    <marker body="pelvis" name="RPSI" pos="-0.151946 0.053339 0.037104" movable="1.0" confidence="0.8"/>
+
+    <marker body="femur_l" name="LKNE" pos="-0.006169 -0.399282 -0.044727" movable="1.0" confidence="0.8"/>
+
+    <marker body="calcaneus_l" name="LANK" pos="0.052699 0.037238 -0.039692" movable="0.0" confidence="1.0"/>
+    <marker body="calcaneus_l" name="LHEE" pos="0.013431 -0.009800 0.029893" movable="1.0" confidence="0.8"/>
+    <marker body="toes_l" name="LTOE" pos="0.049000 0.004900 0.014221" movable="1.0" confidence="0.8"/>
+
+    <marker body="femur_r" name="RKNE" pos="-0.000594 -0.393275 0.047811" movable="1.0" confidence="0.8"/>
+
+    <marker body="calcaneus_r" name="RANK" pos="0.051014 0.040310 0.042011" movable="0.0" confidence="1.0"/>
+    <marker body="calcaneus_r" name="RHEE" pos="0.012538 -0.009800 -0.025456" movable="1.0" confidence="0.8"/>
+    <marker body="toes_r" name="RTOE" pos="0.049000 0.004900 -0.018896" movable="1.0" confidence="0.8"/>
+</markers>

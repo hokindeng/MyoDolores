@@ -1,1 +1,52 @@
-myo_data/ 
+myo_data/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Packaging / distribution
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# Logs and runtime outputs
+*.log
+logs/
+ASAP/logs/
+
+# Checkpoints, models, large binaries
+*.pt
+*.h5
+*.ckpt
+checkpoints/
+keyboard_policy_*.pt
+keyboard_policy_final.pt
+
+# Data archives and compressed files
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.gz
+
+# WandB and TensorBoard runs
+wandb/
+runs/
+
+# IDE / editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+.mypy_cache/
+.pytest_cache/ 

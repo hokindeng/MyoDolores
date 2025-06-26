@@ -1,0 +1,231 @@
+<!-- =================================================
+Copyright (c) 2025 MyoLab, Inc. All Rights Reserved.
+This software and associated documentation files (the "Software") are the intellectual property of MyoLab, Inc. Unauthorized copying, modification, distribution, or use of this code, in whole or in part, without express written permission from the copyright owner is strictly prohibited.
+====================================================== -->
+<mujocoinclude model="MyoSkeleton v1.0.0">
+  <compiler boundmass="0.001" boundinertia="0.001" balanceinertia="true" angle="radian" inertiafromgeom="auto">
+    <lengthrange useexisting="true" inttotal="50" />
+  </compiler>
+  <option timestep="0.002" />
+  <size njmax="1000" nconmax="400" nuser_jnt="1" />
+  <default>
+    <default class="myo">
+      <joint limited="true" stiffness="2" armature="0.02" damping="0.5" />
+      <geom contype="0" conaffinity="0" rgba="0.8 0.8 0.8 1" margin="0.001" />
+      <site group="3" size="0.001" />
+      <tendon limited="false" width="0.001" rgba="0.95 0.3 0.3 1" />
+      <default class="bone">
+        <geom type="mesh" group="0" rgba="0.89 0.85 0.98 1" />
+      </default>
+      <default class="motor">
+        <general gainprm="5 0 0 0 0 0 0 0 0 0" />
+      </default>
+      <default class="myo_marker">
+        <site group="4" rgba="0.8 0.2 0.6 1" size="0.01" />
+      </default>
+      <default class="myo_tracker">
+        <site group="4" rgba="0 1 0 1" size="0.01" />
+      </default>
+      <default class="myo_coll">
+        <geom type="capsule" contype="1" conaffinity="0" condim="3" group="3" rgba="0.8 0.7 0.5 1" margin="0.001" />
+      </default>
+      <default class="skin">
+        <geom type="capsule" contype="1" conaffinity="1" condim="3" group="1" material="MatSkin" rgba="0.8 0.7 0.5 1" margin="0.001" />
+      </default>
+      <default class="wrap">
+        <geom contype="0" conaffinity="0" group="3" rgba="0.5 0.5 0.9 1" />
+      </default>
+    </default>
+  </default>
+  <asset>
+    <mesh name="pelvis_r" file="../meshes/r_pelvis.stl" scale="1.0 1.0 1.0" />
+    <mesh name="pelvis_l" file="../meshes/l_pelvis.stl" scale="1.0 1.0 1.0" />
+    <mesh name="sacrum_1" file="../meshes/sacrum.stl" scale="1.0 1.0 1.0" />
+    <mesh name="lumbar_spine_5" file="../meshes/lumbar5.stl" scale="0.93 0.93 0.93" />
+    <mesh name="lumbar_spine_4" file="../meshes/lumbar4.stl" scale="0.93 0.93 0.93" />
+    <mesh name="lumbar_spine_3" file="../meshes/lumbar3.stl" scale="0.93 0.93 0.93" />
+    <mesh name="lumbar_spine_2" file="../meshes/lumbar2.stl" scale="0.93 0.93 0.93" />
+    <mesh name="lumbar_spine_1" file="../meshes/lumbar1.stl" scale="0.93 0.93 0.93" />
+    <mesh name="thoracic_spine_12" file="../meshes/thoracic12_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thoracic_spine_11" file="../meshes/thoracic11_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thoracic_spine_10" file="../meshes/thoracic10_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thoracic_spine_9" file="../meshes/thoracic9_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thoracic_spine_8" file="../meshes/thoracic8_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thoracic_spine_7" file="../meshes/thoracic7_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thoracic_spine_6" file="../meshes/thoracic6_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thoracic_spine_5" file="../meshes/thoracic5_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thoracic_spine_4" file="../meshes/thoracic4_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thoracic_spine_3" file="../meshes/thoracic3_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thoracic_spine_2" file="../meshes/thoracic2_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thoracic_spine_1" file="../meshes/thoracic1_s.stl" scale="0.89 0.89 0.89" />
+    <mesh name="thorax" file="../meshes/thorax.stl" scale="1.014 1.014 1.014" />
+    <mesh name="cervical_spine_7" file="../meshes/rotatedcerv7.stl" scale="0.89 0.89 0.89" />
+    <mesh name="cervical_spine_6" file="../meshes/cerv6.stl" scale="0.89 0.89 0.89" />
+    <mesh name="cervical_spine_5" file="../meshes/cerv5.stl" scale="0.89 0.89 0.89" />
+    <mesh name="cervical_spine_4" file="../meshes/cerv4.stl" scale="0.89 0.89 0.89" />
+    <mesh name="cervical_spine_3" file="../meshes/cerv3.stl" scale="0.89 0.89 0.89" />
+    <mesh name="cervical_spine_2" file="../meshes/cerv2.stl" scale="0.89 0.89 0.89" />
+    <mesh name="cervical_spine_1" file="../meshes/cerv1.stl" scale="0.89 0.89 0.89" />
+    <mesh name="skull" file="../meshes/skull.stl" scale="0.9 0.9 0.9" />
+    <mesh name="jaw" file="../meshes/jaw.stl" scale="0.9 0.9 0.9" />
+    <mesh name="clavicle_r" file="../meshes/clavicle.stl" scale="1.0 1.0 1.0" />
+    <mesh name="scapula_r" file="../meshes/scapula.stl" scale="1.0 1.0 1.0" />
+    <mesh name="humerus_r" file="../meshes/humerus_rv.stl" scale="1.0 1.0 1.0" />
+    <mesh name="ulna_r" file="../meshes/ulna.stl" scale="1.0 1.0 1.0" />
+    <mesh name="radius_r" file="../meshes/radius.stl" scale="1.0 1.0 1.0" />
+    <mesh name="lunate_r" file="../meshes/lunate.stl" scale="1.0 1.0 1.0" />
+    <mesh name="scaphoid_r" file="../meshes/scaphoid.stl" scale="1.0 1.0 1.0" />
+    <mesh name="pisiform_r" file="../meshes/pisiform.stl" scale="1.0 1.0 1.0" />
+    <mesh name="triquetrum_r" file="../meshes/triquetrum.stl" scale="1.0 1.0 1.0" />
+    <mesh name="capitate_r" file="../meshes/capitate.stl" scale="1.0 1.0 1.0" />
+    <mesh name="trapezium_r" file="../meshes/trapezium.stl" scale="1.0 1.0 1.0" />
+    <mesh name="metacarpal_1_r" file="../meshes/1mc.stl" scale="1.0 1.0 1.0" />
+    <mesh name="proximal_phalanx_1_r" file="../meshes/thumbprox.stl" scale="1.0 1.0 1.0" />
+    <mesh name="distal_phalanx_1_r" file="../meshes/thumbdist.stl" scale="1.0 1.0 1.0" />
+    <mesh name="trapezoid_r" file="../meshes/trapezoid.stl" scale="1.0 1.0 1.0" />
+    <mesh name="hamate_r" file="../meshes/hamate.stl" scale="1.0 1.0 1.0" />
+    <mesh name="metacarpal_2_r" file="../meshes/2mc.stl" scale="1.0 1.0 1.0" />
+    <mesh name="proximal_phalanx_2_r" file="../meshes/2proxph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="intermediate_phalanx_2_r" file="../meshes/2midph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="distal_phalanx_2_r" file="../meshes/2distph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="metacarpal_3_r" file="../meshes/3mc.stl" scale="1.0 1.0 1.0" />
+    <mesh name="proximal_phalanx_3_r" file="../meshes/3proxph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="intermediate_phalanx_3_r" file="../meshes/3midph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="distal_phalanx_3_r" file="../meshes/3distph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="metacarpal_4_r" file="../meshes/4mc.stl" scale="1.0 1.0 1.0" />
+    <mesh name="proximal_phalanx_4_r" file="../meshes/4proxph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="intermediate_phalanx_4_r" file="../meshes/4midph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="distal_phalanx_4_r" file="../meshes/4distph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="metacarpal_5_r" file="../meshes/5mc.stl" scale="1.0 1.0 1.0" />
+    <mesh name="proximal_phalanx_5_r" file="../meshes/5proxph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="intermediate_phalanx_5_r" file="../meshes/5midph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="distal_phalanx_5_r" file="../meshes/5distph.stl" scale="1.0 1.0 1.0" />
+    <mesh name="clavicle_l" file="../meshes/clavicle_mirror.stl" scale="1.0 1.0 1.0" />
+    <mesh name="scapula_l" file="../meshes/scapula_mirror.stl" scale="1.0 1.0 1.0" />
+    <mesh name="humerus_l" file="../meshes/humerus_lv.stl" scale="1.0 1.0 1.0" />
+    <mesh name="ulna_l" file="../meshes/ulna_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="radius_l" file="../meshes/radius_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="lunate_l" file="../meshes/lunate_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="scaphoid_l" file="../meshes/scaphoid_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="pisiform_l" file="../meshes/pisiform_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="triquetrum_l" file="../meshes/triquetrum_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="capitate_l" file="../meshes/capitate_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="trapezium_l" file="../meshes/trapezium_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="metacarpal_1_l" file="../meshes/1mc_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="proximal_phalanx_1_l" file="../meshes/thumbprox_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="distal_phalanx_1_l" file="../meshes/thumbdist_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="trapezoid_l" file="../meshes/trapezoid_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="hamate_l" file="../meshes/hamate_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="metacarpal_2_l" file="../meshes/2mc_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="proximal_phalanx_2_l" file="../meshes/2proxph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="intermediate_phalanx_2_l" file="../meshes/2midph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="distal_phalanx_2_l" file="../meshes/2distph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="metacarpal_3_l" file="../meshes/3mc_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="proximal_phalanx_3_l" file="../meshes/3proxph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="intermediate_phalanx_3_l" file="../meshes/3midph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="distal_phalanx_3_l" file="../meshes/3distph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="metacarpal_4_l" file="../meshes/4mc_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="proximal_phalanx_4_l" file="../meshes/4proxph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="intermediate_phalanx_4_l" file="../meshes/4midph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="distal_phalanx_4_l" file="../meshes/4distph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="metacarpal_5_l" file="../meshes/5mc_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="proximal_phalanx_5_l" file="../meshes/5proxph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="intermediate_phalanx_5_l" file="../meshes/5midph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="distal_phalanx_5_l" file="../meshes/5distph_l.stl" scale="1.0 1.0 1.0" />
+    <mesh name="femur_r" file="../meshes/r_femur.stl" scale="1.0 1.0 1.0" />
+    <mesh name="tibia_r" file="../meshes/r_tibia.stl" scale="1.0 1.0 1.0" />
+    <mesh name="fibula_r" file="../meshes/r_fibula.stl" scale="1.0 1.0 1.0" />
+    <mesh name="talus_r" file="../meshes/r_talus.stl" scale="1.0 1.0 1.0" />
+    <mesh name="foot_r" file="../meshes/r_foot.stl" scale="1.0 1.0 1.0" />
+    <mesh name="toes_r" file="../meshes/r_bofoot.stl" scale="1.0 1.0 1.0" />
+    <mesh name="patella_r" file="../meshes/r_patella.stl" scale="1.0 1.0 1.0" />
+    <mesh name="femur_l" file="../meshes/l_femur.stl" scale="1.0 1.0 1.0" />
+    <mesh name="tibia_l" file="../meshes/l_tibia.stl" scale="1.0 1.0 1.0" />
+    <mesh name="fibula_l" file="../meshes/l_fibula.stl" scale="1.0 1.0 1.0" />
+    <mesh name="talus_l" file="../meshes/l_talus.stl" scale="1.0 1.0 1.0" />
+    <mesh name="foot_l" file="../meshes/l_foot.stl" scale="1.0 1.0 1.0" />
+    <mesh name="toes_l" file="../meshes/l_bofoot.stl" scale="1.0 1.0 1.0" />
+    <mesh name="patella_l" file="../meshes/l_patella.stl" scale="1.0 1.0 1.0" />
+  </asset>
+  <contact>
+    <pair name="contact_0" geom1="coll_thorax_1" geom2="coll_humerus_r" condim="3" />
+    <pair name="contact_1" geom1="coll_thorax_1" geom2="coll_radius_1_r" condim="3" />
+    <pair name="contact_2" geom1="coll_thorax_2" geom2="coll_radius_1_r" condim="3" />
+    <pair name="contact_3" geom1="coll_thorax_3" geom2="coll_radius_1_r" condim="3" />
+    <pair name="contact_4" geom1="coll_thorax_1" geom2="coll_humerus_l" condim="3" />
+    <pair name="contact_5" geom1="coll_thorax_1" geom2="coll_radius_1_l" condim="3" />
+    <pair name="contact_6" geom1="coll_thorax_2" geom2="coll_radius_1_l" condim="3" />
+    <pair name="contact_7" geom1="coll_thorax_3" geom2="coll_radius_1_l" condim="3" />
+    <pair name="contact_8" geom1="coll_humerus_r" geom2="coll_abdomen" condim="3" />
+    <pair name="contact_9" geom1="coll_radius_1_r" geom2="coll_abdomen" condim="3" />
+    <pair name="contact_10" geom1="coll_humerus_l" geom2="coll_abdomen" condim="3" />
+    <pair name="contact_11" geom1="coll_radius_1_l" geom2="coll_abdomen" condim="3" />
+    <pair name="contact_12" geom1="coll_femur_1_r" geom2="coll_femur_1_l" condim="3" />
+    <pair name="contact_13" geom1="coll_femur_2_r" geom2="coll_femur_2_l" condim="3" />
+    <pair name="contact_14" geom1="coll_tibia_1_r" geom2="coll_tibia_1_l" condim="3" />
+    <pair name="contact_15" geom1="coll_tibia_2_r" geom2="coll_tibia_2_l" condim="3" />
+    <pair name="contact_16" geom1="coll_foot_1_r" geom2="coll_foot_1_l" condim="3" />
+    <pair name="contact_17" geom1="coll_foot_2_r" geom2="coll_foot_2_l" condim="3" />
+  </contact>
+  <equality>
+    <joint name="tibia_tx_con_r" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="tibia_tx_r" joint2="knee_flex_r" polycoef="0 0.0058797 -0.0012562 -2.6185e-06 6.2436e-07" />
+    <joint name="tibia_ty_con_r" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="tibia_ty_r" joint2="knee_flex_r" polycoef="0 0.0031288 -0.002308 0.00056156 5.6837e-07" />
+    <joint name="knee_abdu_con_r" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="knee_abdu_r" joint2="knee_flex_r" polycoef="0 0.0791 -0.032848 -0.025218 0.010832" />
+    <joint name="knee_arot_con_r" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="knee_arot_r" joint2="knee_flex_r" polycoef="0 0.3695 -0.16948 0.025164 3.505e-07" />
+    <joint name="patella_ty_con_r" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="patella_ty_r" joint2="knee_flex_r" polycoef="0 -0.048785 0.0092764 0.013167 -0.0034967" />
+    <joint name="patella_tx_con_r" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="patella_tx_r" joint2="knee_flex_r" polycoef="0 -0.015019 -0.034052 0.013339 -0.00087915" />
+    <joint name="patella_rz_con_r" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="patella_rz_r" joint2="knee_flex_r" polycoef="0 0.024761 -1.3165 0.71634 -0.1383" />
+    <joint name="tibia_tx_con_l" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="tibia_tx_l" joint2="knee_flex_l" polycoef="0 -0.0058797 0.0012562 2.6185e-06 -6.2436e-07" />
+    <joint name="tibia_ty_con_l" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="tibia_ty_l" joint2="knee_flex_l" polycoef="0 0.0031288 -0.002308 0.00056156 5.6837e-07" />
+    <joint name="knee_abdu_con_l" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="knee_abdu_l" joint2="knee_flex_l" polycoef="0 0.0791 -0.032848 -0.025218 0.010832" />
+    <joint name="knee_arot_con_l" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="knee_arot_l" joint2="knee_flex_l" polycoef="0 -0.3695 0.16948 -0.025164 -3.505e-07" />
+    <joint name="patella_ty_con_l" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="patella_ty_l" joint2="knee_flex_l" polycoef="0 -0.048785 0.0092764 0.013167 -0.0034967" />
+    <joint name="patella_tx_con_l" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="patella_tx_l" joint2="knee_flex_l" polycoef="0 -0.015019 -0.034052 0.013339 -0.00087915" />
+    <joint name="patella_rz_con_l" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="patella_rz_l" joint2="knee_flex_l" polycoef="0 0.024761 -1.3165 0.71634 -0.1383" />
+    <joint name="c6_flex_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c6_c7_flex" joint2="c7_t1_flex" polycoef="0 1.889 0 0 0" />
+    <joint name="c6_bend_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c6_c7_bend" joint2="c7_t1_bend" polycoef="0 1.471 0 0 0" />
+    <joint name="c6_arot_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c6_c7_arot" joint2="c7_t1_arot" polycoef="0 1.603 0 0 0" />
+    <joint name="c5_flex_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c5_c6_flex" joint2="c7_t1_flex" polycoef="0 2.222 0 0 0" />
+    <joint name="c5_bend_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c5_c6_bend" joint2="c7_t1_bend" polycoef="0 1.682 0 0 0" />
+    <joint name="c5_arot_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c5_c6_arot" joint2="c7_t1_arot" polycoef="0 2.556 0 0 0" />
+    <joint name="c4_flex_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c4_c5_flex" joint2="c7_t1_flex" polycoef="0 2.222 0 0 0" />
+    <joint name="c4_bend_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c4_c5_bend" joint2="c7_t1_bend" polycoef="0 1.718 0 0 0" />
+    <joint name="c4_arot_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c4_c5_arot" joint2="c7_t1_arot" polycoef="0 2.857 0 0 0" />
+    <joint name="c3_flex_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c3_c4_flex" joint2="c7_t1_flex" polycoef="0 1.667 0 0 0" />
+    <joint name="c3_bend_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c3_c4_bend" joint2="c7_t1_bend" polycoef="0 1.471 0 0 0" />
+    <joint name="c3_arot_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c3_c4_arot" joint2="c7_t1_arot" polycoef="0 2.667 0 0 0" />
+    <joint name="c2_flex_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c2_c3_flex" joint2="c7_t1_flex" polycoef="0 1.111 0 0 0" />
+    <joint name="c2_bend_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c2_c3_bend" joint2="c7_t1_bend" polycoef="0 1.236 0 0 0" />
+    <joint name="c2_arot_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="c2_c3_arot" joint2="c7_t1_arot" polycoef="0 1.667 0 0 0" />
+    <joint name="occ_flex_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="occ_c1_flex" joint2="c1_c2_flex" polycoef="0 1.252 0 0 0" />
+    <joint name="occ_bend_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="occ_c1_bend" joint2="c1_c2_bend" polycoef="0 0.743 0 0 0" />
+    <joint name="occ_arot_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="occ_c1_arot" joint2="c1_c2_arot" polycoef="0 0.066 0 0 0" />
+    <joint name="l4_flex_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l4_l5_flex" joint2="l5_s1_flex" polycoef="0 1.48 0 0 0" />
+    <joint name="l4_bend_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l4_l5_bend" joint2="l5_s1_bend" polycoef="0 1.33 0 0 0" />
+    <joint name="l4_arot_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l4_l5_arot" joint2="l5_s1_arot" polycoef="0 1.06 0 0 0" />
+    <joint name="l3_flex_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l3_l4_flex" joint2="l5_s1_flex" polycoef="0 1.632 0 0 0" />
+    <joint name="l3_bend_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l3_l4_bend" joint2="l5_s1_bend" polycoef="0 1.81 0 0 0" />
+    <joint name="l3_arot_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l3_l4_arot" joint2="l5_s1_arot" polycoef="0 1.06 0 0 0" />
+    <joint name="l2_flex_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l2_l3_flex" joint2="l5_s1_flex" polycoef="0 1.848 0 0 0" />
+    <joint name="l2_bend_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l2_l3_bend" joint2="l5_s1_bend" polycoef="0 1.84 0 0 0" />
+    <joint name="l2_arot_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l2_l3_arot" joint2="l5_s1_arot" polycoef="0 0.874 0 0 0" />
+    <joint name="l1_flex_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l1_l2_flex" joint2="l5_s1_flex" polycoef="0 2.04 0 0 0" />
+    <joint name="l1_bend_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l1_l2_bend" joint2="l5_s1_bend" polycoef="0 1.39 0 0 0" />
+    <joint name="l1_arot_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="l1_l2_arot" joint2="l5_s1_arot" polycoef="0 0.812 0 0 0" />
+    <joint name="t12_flex_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="t12_l1_flex" joint2="l5_s1_flex" polycoef="0 0.734 0 0 0" />
+    <joint name="t12_bend_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="t12_l1_bend" joint2="l5_s1_bend" polycoef="0 1.02 0 0 0" />
+    <joint name="t12_arot_con" solref="0.02 1" solimp="0.9999 0.9999 0.001 0.5 2" joint1="t12_l1_arot" joint2="l5_s1_arot" polycoef="0 23.3 0 0 0" />
+  </equality>
+  <sensor>
+    <accelerometer name="wrist_r_acc" site="s_wrist_r" />
+    <accelerometer name="wrist_l_acc" site="s_wrist_l" />
+    <accelerometer name="head_acc" site="s_head" />
+    <magnetometer name="wrist_r_mag" site="s_wrist_r" />
+    <magnetometer name="wrist_l_mag" site="s_wrist_l" />
+    <magnetometer name="head_mag" site="s_head" />
+    <touch name="r_foot" site="r_foot_touch" />
+    <touch name="r_toes" site="r_toes_touch" />
+    <touch name="l_foot" site="l_foot_touch" />
+    <touch name="l_toes" site="l_toes_touch" />
+  </sensor>
+</mujocoinclude>

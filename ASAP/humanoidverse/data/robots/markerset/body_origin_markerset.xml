@@ -1,0 +1,42 @@
+
+<!-- =================================================
+Copyright (c) 2025 MyoLab, Inc. All Rights Reserved.
+This software and associated documentation files (the "Software") are the intellectual property of MyoLab, Inc. Unauthorized copying, modification, distribution, or use of this code, in whole or in part, without express written permission from the copyright owner is strictly prohibited.
+====================================================== -->
+<markers name="body_origin_markerset" model="MyoSkeleton v1.0.0">
+    <!-- Spine -->
+    <marker body="myoskeleton_root" name="myoskeleton_root_marker" pos="0 0 0" movable="0"/>
+    <marker body="pelvis" name="pelvis_marker" pos="0 0 0" movable="0"/>
+    <marker body="lumbar_spine_5" name="lumbar_spine_5_marker" pos="0 0 0" movable="0"/>
+    <marker body="lumbar_spine_3" name="lumbar_spine_3_marker" pos="0 0 0" movable="0"/>
+    <marker body="thoracic_spine" name="thoracic_spine_marker" pos="0 0 0" movable="0"/>
+    <marker body="cervical_spine_7" name="cervical_spine_7_marker" pos="0 0 0" movable="0"/>
+    <marker body="cervical_spine_4" name="cervical_spine_4_marker" pos="0 0 0" movable="0"/>
+    <marker body="skull" name="skull_marker" pos="0 0 0" movable="0"/>
+
+    <!-- Right Arm -->
+    <marker body="clavicle_r" name="clavicle_r_marker" pos="0 0 0" movable="0"/>
+    <marker body="humerus_r" name="humerus_r_marker" pos="0 0 0" movable="0"/>
+    <marker body="ulna_r" name="ulna_r_marker" pos="0 0 0" movable="0"/>
+    <marker body="lunate_r" name="lunate_r_marker" pos="0 0 0" movable="0"/>
+
+    <!-- Left Arm -->
+    <marker body="clavicle_l" name="clavicle_l_marker" pos="0 0 0" movable="0"/>
+    <marker body="humerus_l" name="humerus_l_marker" pos="0 0 0" movable="0"/>
+    <marker body="ulna_l" name="ulna_l_marker" pos="0 0 0" movable="0"/>
+    <marker body="lunate_l" name="lunate_l_marker" pos="0 0 0" movable="0"/>
+
+    <!-- Right Leg -->
+    <marker body="femur_r" name="femur_r_marker" pos="0 0 0" movable="0"/>
+    <marker body="tibia_r" name="tibia_r_marker" pos="0 0 0" movable="0"/>
+    <marker body="talus_r" name="talus_r_marker" pos="0 0 0" movable="0"/>
+    <marker body="calcaneus_r" name="calcaneus_r_marker" pos="0 0 0" movable="0"/>
+    <marker body="toes_r" name="toes_r_marker" pos="0 0 0" movable="0"/>
+
+    <!-- Left Leg -->
+    <marker body="femur_l" name="femur_l_marker" pos="0 0 0" movable="0"/>
+    <marker body="tibia_l" name="tibia_l_marker" pos="0 0 0" movable="0"/>
+    <marker body="talus_l" name="talus_l_marker" pos="0 0 0" movable="0"/>
+    <marker body="calcaneus_l" name="calcaneus_l_marker" pos="0 0 0" movable="0"/>
+    <marker body="toes_l" name="toes_l_marker" pos="0 0 0" movable="0"/>
+</markers>
