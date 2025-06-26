@@ -1,0 +1,157 @@
+# @package _global_
+
+defaults:
+  - /env@: motion_tracking
+  - /reward@: motion_tracking_reward
+  - /termination@: motion_tracking_termination
+  - /reset@: motion_tracking_reset
+
+# MyoSkeleton-specific configuration for imitation learning
+robot:
+  # Model configuration - use verified setup
+  model_xml_path_function: "get_model_xml_path"  # Use myo_model helper
+  model_type: "motors"  # MyoSkeleton with actuators
+  
+  # DOF configuration - verified from successful loading
+  dof_obs_size: 140      # MyoSkeleton position DOFs
+  dof_vel_obs_size: 139  # MyoSkeleton velocity DOFs  
+  actions_dim: 133       # MyoSkeleton actuators
+  
+  # Physics configuration
+  step_dt: 0.02          # 50 Hz control rate (matches motion data ~30Hz)
+  decimation: 1          # No decimation for high fidelity
+  
+  # Motion tracking specific settings
+  motion_tracking:
+    # Use custom MyoSkeleton motion library
+    motion_lib_class: "MyoSkeletonMotionLib"
+    motion_data_path: "../../myo_data"
+    motion_file_pattern: "**/target_*.h5"
+    max_motions: 1000     # Start with subset for testing
+    
+    # Key tracking bodies for MyoSkeleton imitation
+    tracking_bodies:
+      - "head"
+      - "hand_l" 
+      - "hand_r"
+      - "calcaneous_l"  # feet
+      - "calcaneous_r"
+      - "pelvis"        # core body
+    
+    # Upper body focus for expressive motions
+    upper_body_bodies:
+      - "head"
+      - "clavicle_l"
+      - "clavicle_r" 
+      - "humerus_l"
+      - "humerus_r"
+      - "hand_l"
+      - "hand_r"
+    
+    # Lower body for locomotion stability
+    lower_body_bodies:
+      - "pelvis"
+      - "femur_l"
+      - "femur_r"
+      - "tibia_l" 
+      - "tibia_r"
+      - "calcaneous_l"
+      - "calcaneous_r"
+  
+  # Observation configuration
+  observations:
+    # Proprioceptive observations
+    dof_pos: true         # Joint positions
+    dof_vel: true         # Joint velocities
+    last_actions: true    # Action history
+    
+    # Motion tracking observations
+    target_root_pos: true      # Target root position
+    target_root_rot: true      # Target root rotation
+    target_dof_pos: true       # Target joint positions
+    target_body_pos: true      # Target body positions
+    
+    # Temporal information for phase tracking
+    motion_phase: true         # Current phase in motion
+    motion_time_remaining: true # Time left in current motion
+    
+  # Action configuration  
+  actions:
+    type: "position"      # Position control for motors
+    clip_actions: true    # Clip to valid ranges
+    action_scale: 1.0     # No scaling initially
+    
+  # Domain randomization for robustness
+  domain_randomization:
+    # Physics randomization
+    randomize_friction: true
+    friction_range: [0.8, 1.2]
+    
+    randomize_restitution: true  
+    restitution_range: [0.0, 0.1]
+    
+    # Motion randomization
+    randomize_motion_speed: true
+    motion_speed_range: [0.8, 1.2]
+    
+    randomize_motion_phase: true  # Start at random phase
+    
+# Environment configuration
+env:
+  num_envs: 4096        # Large batch for efficient training
+  env_spacing: 2.0      # Space between environments
+  episode_length_s: 20  # 20 second episodes
+  
+  # Reset configuration
+  reset_on_termination: true
+  reset_distribution: "uniform"  # Uniform sampling over motions
+
+# Reward configuration  
+reward:
+  # Motion tracking rewards (high weight)
+  body_pos_reward_weight: 10.0     # Body position tracking
+  body_rot_reward_weight: 5.0      # Body rotation tracking
+  dof_pos_reward_weight: 8.0       # Joint position tracking
+  dof_vel_reward_weight: 2.0       # Joint velocity tracking
+  
+  # Root tracking rewards
+  root_pos_reward_weight: 5.0      # Root position
+  root_rot_reward_weight: 3.0      # Root orientation
+  
+  # Regularization rewards (lower weight)
+  action_smoothness_weight: 0.1    # Smooth actions
+  energy_penalty_weight: 0.01      # Energy efficiency
+  
+  # Style rewards for natural motion
+  natural_pose_weight: 1.0         # Encourage natural poses
+  balance_reward_weight: 2.0       # Maintain balance
+
+# Termination configuration
+termination:
+  # Termination conditions
+  body_contact_termination: true   # Terminate on unwanted contacts
+  dof_limit_termination: true     # Terminate on joint limits
+  root_height_termination: true   # Terminate if robot falls
+  
+  # Termination thresholds
+  min_root_height: 0.5           # Minimum height before termination
+  max_body_contact_force: 100.0  # Maximum contact force
+  
+# Training configuration  
+train:
+  # Algorithm settings
+  algorithm: "amp"        # Adversarial Motion Priors
+  
+  # Learning rates
+  learning_rate: 3e-4
+  discriminator_lr: 1e-4
+  
+  # Training schedule
+  max_iterations: 50000
+  save_interval: 1000
+  log_interval: 100
+  
+  # AMP specific settings
+  amp_replay_buffer_size: 100000
+  amp_batch_size: 512
+  discriminator_batch_size: 512 

@@ -7,3 +7,12 @@
 [submodule "myo_retarget"]
 	path = submodules/myo_retarget
 	url = https://github.com/myolab/myo_retarget.git
+[submodule "submodules/myo_api"]
+	path = submodules/myo_api
+	url = https://github.com/myolab/myo_api.git
+[submodule "submodules/myo_model_internal"]
+	path = submodules/myo_model_internal
+	url = https://github.com/myolab/myo_model_internal.git
+[submodule "submodules/myo_retarget"]
+	path = submodules/myo_retarget
+	url = https://github.com/myolab/myo_retarget.git
