@@ -21,13 +21,13 @@ def test_keyboard_control():
     print("MyoDolores Keyboard Control Test")
     print("=" * 40)
     
-    # Change to model directory
+    # Use proper model path resolution
     original_dir = os.getcwd()
-    model_dir = Path("myo_model_internal/myo_model/")
-    os.chdir(model_dir)
+    sys.path.append('submodules/myo_model_internal')
+    from myo_model.utils.model_utils import get_model_xml_path
     
     # Load model
-    model_path = "myoskeleton/myoskeleton_with_motors.xml"
+    model_path = get_model_xml_path('motors')
     print(f"Loading model: {model_path}")
     model = mujoco.MjModel.from_xml_path(model_path)
     data = mujoco.MjData(model)

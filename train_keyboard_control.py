@@ -221,18 +221,17 @@ def train_keyboard_control():
     print(f"Training on device: {device}")
     print(f"GPU: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'None'}")
     
-    # Change to myo_model directory to resolve relative paths
+    # Use proper model path resolution
     original_dir = os.getcwd()
-    model_dir = Path("myo_model_internal/myo_model/")
-    model_file = "myoskeleton/myoskeleton_with_motors.xml"
+    sys.path.append('submodules/myo_model_internal')
+    from myo_model.utils.model_utils import get_model_xml_path
     
-    if not (model_dir / model_file).exists():
-        print(f"Error: Model not found at {model_dir / model_file}")
+    model_path = get_model_xml_path('motors')
+    if not Path(model_path).exists():
+        print(f"Error: Model not found at {model_path}")
         return
     
-    os.chdir(model_dir)
-    print(f"Changed to model directory: {os.getcwd()}")
-    model_path = model_file
+    print(f"Using model: {model_path}")
         
     # Create environment
     env = KeyboardControlEnv(model_path, num_envs=num_envs, device=device)
@@ -285,9 +284,6 @@ def train_keyboard_control():
     # Final save
     torch.save(policy.state_dict(), 'keyboard_policy_final.pt')
     print("Training complete! Saved final model as 'keyboard_policy_final.pt'")
-    
-    # Restore original directory
-    os.chdir(original_dir)
 
 
 if __name__ == "__main__":
