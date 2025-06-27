@@ -1,0 +1,9 @@
+{
+  "experiment_name": "myoskeleton_imitation_20250627_000537",
+  "max_motions": 100,
+  "num_envs": 2048,
+  "max_epochs": 5,
+  "device": "cpu",
+  "checkpoint_interval": 10,
+  "log_interval": 5
+}
