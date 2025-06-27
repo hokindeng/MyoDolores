@@ -171,8 +171,8 @@ class MotionDataset:
             # Create observation (state + target)
             obs = torch.cat([current_qpos_norm, current_qvel_norm, target_qpos_norm])
             
-            # Target action (what we want the policy to output)
-            action = target_qpos - current_qpos  # Position delta
+            # Target action (simplified to position delta for actuators only)
+            action = (target_qpos - current_qpos)[:self.model.nu]  # Take only actuator dimensions
             
             batch_current.append(obs)
             batch_target.append(action)
@@ -187,7 +187,7 @@ def train_motion_imitation():
     
     # Configuration
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    max_motions = 2000  # Use 2000 motions for good diversity
+    max_motions = 100  # Start with 100 motions for faster testing
     batch_size = 256
     learning_rate = 3e-4
     num_epochs = 100
@@ -208,9 +208,9 @@ def train_motion_imitation():
         print("❌ No motions loaded!")
         return
     
-    # Create policy
-    obs_dim = dataset.model.nq * 2 + dataset.model.nq  # current_pos + current_vel + target_pos
-    action_dim = dataset.model.nq
+    # Create policy  
+    obs_dim = dataset.model.nq + dataset.model.nv + dataset.model.nq  # current_pos + current_vel + target_pos
+    action_dim = dataset.model.nu  # Use actuator dimension, not DOF
     
     policy = MotionImitationPolicy(obs_dim, action_dim).to(device)
     optimizer = torch.optim.Adam(policy.parameters(), lr=learning_rate)

@@ -1,0 +1,225 @@
+🚀 Motion Imitation Training
+==================================================
+Device: cpu
+Max motions: 100
+Batch size: 256
+Epochs: 100
+==================================================
+🎭 Loading motion dataset from myo_data...
+🦴 MyoSkeleton: 140 DOFs, 133 actuators
+📁 Loading 100 motion files...
+Reading: myo_data/HAA500_output/Play_Cymbals/target_Play_Cymbals_00.h5
+Reading: myo_data/HAA500_output/Fish-hunting_Hold_clip_10/target_Fish-hunting_Hold_clip_10_00.h5
+Reading: myo_data/HAA500_output/Squash_Backhand_clip_16/target_Squash_Backhand_clip_16_00.h5
+Reading: myo_data/game_motion_output/Short_Weapon_Klauenstock_clip_10/target_Short_Weapon_Klauenstock_clip_10_00.h5
+Reading: myo_data/HAA500_output/Using_Metal_Detector_clip_7/target_Using_Metal_Detector_clip_7_00.h5
+Reading: myo_data/aist_output/Dance_House_Train_clip_3/target_Dance_House_Train_clip_3_00.h5
+Reading: myo_data/aist_output/Dance_House_Swirl_clip_4/target_Dance_House_Swirl_clip_4_00.h5
+Reading: myo_data/humman_output/Kneeling_Handwaving_Run_Kneeling_Arm_Drill_clip_1/target_Kneeling_Handwaving_Run_Kneeling_Arm_Drill_clip_1_00.h5
+Reading: myo_data/dance_output/Classical_Dance_Eye_Training_clip_1/target_Classical_Dance_Eye_Training_clip_1_00.h5
+Reading: myo_data/kungfu_output/Yang_Style_40_Form_Tai_Chi_Competition_Routine_Step18/target_Yang_Style_40_Form_Tai_Chi_Competition_Routine_Step18_00.h5
+Reading: myo_data/game_motion_output/Hand_Clapping_Choreography_clip_5/target_Hand_Clapping_Choreography_clip_5_00.h5
+Reading: myo_data/game_motion_output/Projectile_Taillenbecken_clip_6/target_Projectile_Taillenbecken_clip_6_00.h5
+Reading: myo_data/HAA500_output/Curling_Sweep_clip_5/target_Curling_Sweep_clip_5_00.h5
+Reading: myo_data/HAA500_output/Burpee_clip_5/target_Burpee_clip_5_00.h5
+Reading: myo_data/HAA500_output/Roller-skating_Forward_clip_9/target_Roller-skating_Forward_clip_9_00.h5
+Reading: myo_data/HAA500_output/Football_Run_clip_8/target_Football_Run_clip_8_00.h5
+Reading: myo_data/game_motion_output/Short_Weapon_Hatchet_clip_8/target_Short_Weapon_Hatchet_clip_8_00.h5
+Reading: myo_data/aist_output/Dance_Street_Jazz_Contraction/target_Dance_Street_Jazz_Contraction_00.h5
+Reading: myo_data/game_motion_output/Other_Schnellfeuerwaffe_clip_8/target_Other_Schnellfeuerwaffe_clip_8_00.h5
+Reading: myo_data/game_motion_output/Short_Weapon_Fluktuation_clip_2/target_Short_Weapon_Fluktuation_clip_2_00.h5
+Reading: myo_data/aist_output/Dance_Break_clip_1/target_Dance_Break_clip_1_00.h5
+Reading: myo_data/game_motion_output/Katana_Annular_clip_10/target_Katana_Annular_clip_10_00.h5
+Reading: myo_data/HAA500_output/Playing_Nunchucks_clip_8/target_Playing_Nunchucks_clip_8_00.h5
+Reading: myo_data/HAA500_output/Beer_Pong_Throw/target_Beer_Pong_Throw_00.h5
+Reading: myo_data/HAA500_output/Remove_Car_Tire_clip_6/target_Remove_Car_Tire_clip_6_00.h5
+Reading: myo_data/dance_output/Ballet_Spin_Compilation_clip_1/target_Ballet_Spin_Compilation_clip_1_00.h5
+Reading: myo_data/aist_output/Dance_Pop_Body_Wave_clip_12/target_Dance_Pop_Body_Wave_clip_12_00.h5
+Reading: myo_data/game_motion_output/Short_Weapon_Abrei_clip_6/target_Short_Weapon_Abrei_clip_6_00.h5
+Reading: myo_data/game_motion_output/Life_Sit_clip_10/target_Life_Sit_clip_10_00.h5
+Reading: myo_data/game_motion_output/Dual_Wield_Kreuzschwertblitz_clip_8/target_Dual_Wield_Kreuzschwertblitz_clip_8_00.h5
+Reading: myo_data/aist_output/Dance_Krump_Stomp_clip_19/target_Dance_Krump_Stomp_clip_19_00.h5
+Reading: myo_data/HAA500_output/Crawling_clip_2/target_Crawling_clip_2_00.h5
+Reading: myo_data/game_motion_output/Katana_Lichtgeschwindigkeit_clip_7/target_Katana_Lichtgeschwindigkeit_clip_7_00.h5
+Reading: myo_data/aist_output/Dance_Break_clip_8/target_Dance_Break_clip_8_00.h5
+Reading: myo_data/game_motion_output/Long_Weapon_Feint_clip_4/target_Long_Weapon_Feint_clip_4_00.h5
+Reading: myo_data/game_motion_output/Shield_Big_clip_2/target_Shield_Big_clip_2_00.h5
+Reading: myo_data/perform_output/Put_On_Cloth_clip_1/target_Put_On_Cloth_clip_1_00.h5
+Reading: myo_data/game_motion_output/Short_Weapon_Assault_clip_4/target_Short_Weapon_Assault_clip_4_00.h5
+Reading: myo_data/HAA500_output/Gym_Plank_clip_19/target_Gym_Plank_clip_19_00.h5
+Reading: myo_data/game_motion_output/Entertainment_Battle/target_Entertainment_Battle_00.h5
+Reading: myo_data/game_motion_output/Emotion_Intelligent_clip_1/target_Emotion_Intelligent_clip_1_00.h5
+Reading: myo_data/HAA500_output/Underarm_Turn_clip_13/target_Underarm_Turn_clip_13_00.h5
+Reading: myo_data/game_motion_output/Move_Stare_clip_5/target_Move_Stare_clip_5_00.h5
+Reading: myo_data/HAA500_output/Frisbee_Throw_clip_7/target_Frisbee_Throw_clip_7_00.h5
+Reading: myo_data/humman_output/Roll_Of_Abdominal/target_Roll_Of_Abdominal_00.h5
+Reading: myo_data/game_motion_output/Dual_Wield_Speerschwert_clip_17/target_Dual_Wield_Speerschwert_clip_17_00.h5
+Reading: myo_data/HAA500_output/Forward_Roll_clip_15/target_Forward_Roll_clip_15_00.h5
+Reading: myo_data/aist_output/Dance_Street_Jazz_Chasse_clip_3/target_Dance_Street_Jazz_Chasse_clip_3_00.h5
+Reading: myo_data/game_motion_output/Long_Weapon_Aufgespie_clip_1/target_Long_Weapon_Aufgespie_clip_1_00.h5
+Reading: myo_data/HAA500_output/Equestrian_Run_clip_3/target_Equestrian_Run_clip_3_00.h5
+Reading: myo_data/game_motion_output/Short_Weapon_Druckschub_clip_14/target_Short_Weapon_Druckschub_clip_14_00.h5
+Reading: myo_data/kungfu_output/Kung_Fu_Flying_Kick_clip_12/target_Kung_Fu_Flying_Kick_clip_12_00.h5
+Reading: myo_data/game_motion_output/Pause_Sensitive_clip_2/target_Pause_Sensitive_clip_2_00.h5
+Reading: myo_data/game_motion_output/Maruta_De_clip_1/target_Maruta_De_clip_1_00.h5
+Reading: myo_data/game_motion_output/Move_Impacted_clip_3/target_Move_Impacted_clip_3_00.h5
+Reading: myo_data/game_motion_output/Other_Rice_clip_6/target_Other_Rice_clip_6_00.h5
+Reading: myo_data/humman_output/Sit_On_The_Left_Side_Of_The_Cross_Your_Bottom/target_Sit_On_The_Left_Side_Of_The_Cross_Your_Bottom_00.h5
+Reading: myo_data/HAA500_output/Yoga_Triangle_clip_7/target_Yoga_Triangle_clip_7_00.h5
+Reading: myo_data/game_motion_output/Dual_Wield_Durchdringende_clip_2/target_Dual_Wield_Durchdringende_clip_2_00.h5
+Reading: myo_data/HAA500_output/Taekwondo_Punch_clip_9/target_Taekwondo_Punch_clip_9_00.h5
+Reading: myo_data/game_motion_output/Move_Impacted_clip_8/target_Move_Impacted_clip_8_00.h5
+Reading: myo_data/game_motion_output/Projectile_Pitcher_clip_5/target_Projectile_Pitcher_clip_5_00.h5
+Reading: myo_data/game_motion_output/Hand_Clapping_Choreography_clip_13/target_Hand_Clapping_Choreography_clip_13_00.h5
+Reading: myo_data/HAA500_output/Yoga_Fish_clip_9/target_Yoga_Fish_clip_9_00.h5
+Reading: myo_data/game_motion_output/Dual_Wield_Hackfleischschneider_clip_6/target_Dual_Wield_Hackfleischschneider_clip_6_00.h5
+Reading: myo_data/perform_output/Hungry/target_Hungry_00.h5
+Reading: myo_data/game_motion_output/Hand_In_clip_5/target_Hand_In_clip_5_00.h5
+Reading: myo_data/game_motion_output/Dual_Wield_Geschichtete_clip_4/target_Dual_Wield_Geschichtete_clip_4_00.h5
+Reading: myo_data/dance_output/Electrician_Version_Exo_The_Eve_Jump/target_Electrician_Version_Exo_The_Eve_Jump_00.h5
+Reading: myo_data/aist_output/Dance_Pop_Roll_clip_5/target_Dance_Pop_Roll_clip_5_00.h5
+Reading: myo_data/aist_output/Dance_House_clip_4/target_Dance_House_clip_4_00.h5
+Reading: myo_data/game_motion_output/Long_Weapon_Gro_clip_8/target_Long_Weapon_Gro_clip_8_00.h5
+Reading: myo_data/game_motion_output/Long_Weapon_Herumschwingen_clip_8/target_Long_Weapon_Herumschwingen_clip_8_00.h5
+Reading: myo_data/HAA500_output/Yoga_Locust_clip_5/target_Yoga_Locust_clip_5_00.h5
+Reading: myo_data/game_motion_output/Long_Weapon_Sch_clip_1/target_Long_Weapon_Sch_clip_1_00.h5
+Reading: myo_data/aist_output/Dance_Krump_Tick/target_Dance_Krump_Tick_00.h5
+Reading: myo_data/game_motion_output/Short_Weapon_Stomp_clip_13/target_Short_Weapon_Stomp_clip_13_00.h5
+Reading: myo_data/perform_output/Tape_On_Paper_clip_1/target_Tape_On_Paper_clip_1_00.h5
+Reading: myo_data/HAA500_output/Speedskating_Forward_clip_16/target_Speedskating_Forward_clip_16_00.h5
+Reading: myo_data/HAA500_output/Battle-rope_Rainbow_clip_8/target_Battle-rope_Rainbow_clip_8_00.h5
+Reading: myo_data/HAA500_output/Yoga_Gate_clip_7/target_Yoga_Gate_clip_7_00.h5
+Reading: myo_data/game_motion_output/Strange_Weapon_Satellite_clip_13/target_Strange_Weapon_Satellite_clip_13_00.h5
+Reading: myo_data/HAA500_output/Windsurfing_clip_10/target_Windsurfing_clip_10_00.h5
+Reading: myo_data/aist_output/Dance_Ballet_Jazz_Grand_Pas_De_Chat_clip_2/target_Dance_Ballet_Jazz_Grand_Pas_De_Chat_clip_2_00.h5
+Reading: myo_data/game_motion_output/Dual_Wield_Speerschwert_clip_18/target_Dual_Wield_Speerschwert_clip_18_00.h5
+Reading: myo_data/game_motion_output/Short_Weapon_Kieferhieb_clip_7/target_Short_Weapon_Kieferhieb_clip_7_00.h5
+Reading: myo_data/HAA500_output/Baseball_Bunt_clip_6/target_Baseball_Bunt_clip_6_00.h5
+Reading: myo_data/game_motion_output/Katana_Blitzgewalt_clip_9/target_Katana_Blitzgewalt_clip_9_00.h5
+Reading: myo_data/HAA500_output/Whipping_clip_11/target_Whipping_clip_11_00.h5
+Reading: myo_data/game_motion_output/Dance_Singing_clip_8/target_Dance_Singing_clip_8_00.h5
+Reading: myo_data/HAA500_output/Forward_Roll_clip_11/target_Forward_Roll_clip_11_00.h5
+Reading: myo_data/game_motion_output/Life_Weapon_clip_3/target_Life_Weapon_clip_3_00.h5
+Reading: myo_data/game_motion_output/Life_Wearing_clip_10/target_Life_Wearing_clip_10_00.h5
+Reading: myo_data/HAA500_output/Volleyball_Underhand_clip_19/target_Volleyball_Underhand_clip_19_00.h5
+Reading: myo_data/animation_output/Ways_To_Pick_Up_A_Dollar_Snapchatter/target_Ways_To_Pick_Up_A_Dollar_Snapchatter_00.h5
+Reading: myo_data/dance_output/What_Is_A_Person_Full_Of_Desire_clip_1/target_What_Is_A_Person_Full_Of_Desire_clip_1_00.h5
+Reading: myo_data/game_motion_output/Katana_Pool_clip_1/target_Katana_Pool_clip_1_00.h5
+Reading: myo_data/game_motion_output/Damage_Get_clip_7/target_Damage_Get_clip_7_00.h5
+Reading: myo_data/game_motion_output/Hand_Parierz_clip_3/target_Hand_Parierz_clip_3_00.h5
+Reading: myo_data/game_motion_output/Shield_Schwertk_clip_1/target_Shield_Schwertk_clip_1_00.h5
+  Loaded 100/100 motions...
+✅ Loaded 100 motions, 11526 total frames
+📊 Dataset statistics computed
+🧠 Policy: 419 obs → 133 actions
+Epoch   1: Loss = 0.005820 (Best: 0.005820)
+Epoch   2: Loss = 0.000007 (Best: 0.000007)
+Epoch   3: Loss = 0.000000 (Best: 0.000000)
+Epoch   4: Loss = 0.000000 (Best: 0.000000)
+Epoch   5: Loss = 0.000000 (Best: 0.000000)
+Epoch   6: Loss = 0.000000 (Best: 0.000000)
+Epoch   7: Loss = 0.000000 (Best: 0.000000)
+Epoch   8: Loss = 0.000000 (Best: 0.000000)
+Epoch   9: Loss = 0.000000 (Best: 0.000000)
+Epoch  10: Loss = 0.000000 (Best: 0.000000)
+Epoch  11: Loss = 0.000000 (Best: 0.000000)
+Epoch  12: Loss = 0.000000 (Best: 0.000000)
+Epoch  13: Loss = 0.000000 (Best: 0.000000)
+Epoch  14: Loss = 0.000000 (Best: 0.000000)
+Epoch  15: Loss = 0.000001 (Best: 0.000000)
+Epoch  16: Loss = 0.000000 (Best: 0.000000)
+Epoch  17: Loss = 0.000002 (Best: 0.000000)
+Epoch  18: Loss = 0.000001 (Best: 0.000000)
+Epoch  19: Loss = 0.000000 (Best: 0.000000)
+Epoch  20: Loss = 0.000004 (Best: 0.000000)
+Epoch  21: Loss = 0.000003 (Best: 0.000000)
+Epoch  22: Loss = 0.000001 (Best: 0.000000)
+Epoch  23: Loss = 0.000004 (Best: 0.000000)
+Epoch  24: Loss = 0.000001 (Best: 0.000000)
+Epoch  25: Loss = 0.000005 (Best: 0.000000)
+💾 Saved checkpoint at epoch 25
+Epoch  26: Loss = 0.000000 (Best: 0.000000)
+Epoch  27: Loss = 0.000005 (Best: 0.000000)
+Epoch  28: Loss = 0.000009 (Best: 0.000000)
+Epoch  29: Loss = 0.000001 (Best: 0.000000)
+Epoch  30: Loss = 0.000000 (Best: 0.000000)
+Epoch  31: Loss = 0.000020 (Best: 0.000000)
+Epoch  32: Loss = 0.000001 (Best: 0.000000)
+Epoch  33: Loss = 0.000000 (Best: 0.000000)
+Epoch  34: Loss = 0.000006 (Best: 0.000000)
+Epoch  35: Loss = 0.000001 (Best: 0.000000)
+Epoch  36: Loss = 0.000005 (Best: 0.000000)
+Epoch  37: Loss = 0.000000 (Best: 0.000000)
+Epoch  38: Loss = 0.000019 (Best: 0.000000)
+Epoch  39: Loss = 0.000000 (Best: 0.000000)
+Epoch  40: Loss = 0.000000 (Best: 0.000000)
+Epoch  41: Loss = 0.000002 (Best: 0.000000)
+Epoch  42: Loss = 0.000011 (Best: 0.000000)
+Epoch  43: Loss = 0.000000 (Best: 0.000000)
+Epoch  44: Loss = 0.000000 (Best: 0.000000)
+Epoch  45: Loss = 0.000023 (Best: 0.000000)
+Epoch  46: Loss = 0.000001 (Best: 0.000000)
+Epoch  47: Loss = 0.000000 (Best: 0.000000)
+Epoch  48: Loss = 0.000000 (Best: 0.000000)
+Epoch  49: Loss = 0.000000 (Best: 0.000000)
+Epoch  50: Loss = 0.000023 (Best: 0.000000)
+💾 Saved checkpoint at epoch 50
+Epoch  51: Loss = 0.000000 (Best: 0.000000)
+Epoch  52: Loss = 0.000000 (Best: 0.000000)
+Epoch  53: Loss = 0.000005 (Best: 0.000000)
+Epoch  54: Loss = 0.000000 (Best: 0.000000)
+Epoch  55: Loss = 0.000011 (Best: 0.000000)
+Epoch  56: Loss = 0.000003 (Best: 0.000000)
+Epoch  57: Loss = 0.000000 (Best: 0.000000)
+Epoch  58: Loss = 0.000006 (Best: 0.000000)
+Epoch  59: Loss = 0.000005 (Best: 0.000000)
+Epoch  60: Loss = 0.000000 (Best: 0.000000)
+Epoch  61: Loss = 0.000000 (Best: 0.000000)
+Epoch  62: Loss = 0.000009 (Best: 0.000000)
+Epoch  63: Loss = 0.000000 (Best: 0.000000)
+Epoch  64: Loss = 0.000014 (Best: 0.000000)
+Epoch  65: Loss = 0.000004 (Best: 0.000000)
+Epoch  66: Loss = 0.000000 (Best: 0.000000)
+Epoch  67: Loss = 0.000000 (Best: 0.000000)
+Epoch  68: Loss = 0.000003 (Best: 0.000000)
+Epoch  69: Loss = 0.000002 (Best: 0.000000)
+Epoch  70: Loss = 0.000002 (Best: 0.000000)
+Epoch  71: Loss = 0.000005 (Best: 0.000000)
+Epoch  72: Loss = 0.000001 (Best: 0.000000)
+Epoch  73: Loss = 0.000010 (Best: 0.000000)
+Epoch  74: Loss = 0.000028 (Best: 0.000000)
+Epoch  75: Loss = 0.000000 (Best: 0.000000)
+💾 Saved checkpoint at epoch 75
+Epoch  76: Loss = 0.000000 (Best: 0.000000)
+Epoch  77: Loss = 0.000000 (Best: 0.000000)
+Epoch  78: Loss = 0.000000 (Best: 0.000000)
+Epoch  79: Loss = 0.000000 (Best: 0.000000)
+Epoch  80: Loss = 0.000003 (Best: 0.000000)
+Epoch  81: Loss = 0.000000 (Best: 0.000000)
+Epoch  82: Loss = 0.000000 (Best: 0.000000)
+Epoch  83: Loss = 0.000008 (Best: 0.000000)
+Epoch  84: Loss = 0.000000 (Best: 0.000000)
+Epoch  85: Loss = 0.000000 (Best: 0.000000)
+Epoch  86: Loss = 0.000004 (Best: 0.000000)
+Epoch  87: Loss = 0.000000 (Best: 0.000000)
+Epoch  88: Loss = 0.000006 (Best: 0.000000)
+Epoch  89: Loss = 0.000000 (Best: 0.000000)
+Epoch  90: Loss = 0.000005 (Best: 0.000000)
+Epoch  91: Loss = 0.000000 (Best: 0.000000)
+Epoch  92: Loss = 0.000000 (Best: 0.000000)
+Epoch  93: Loss = 0.000010 (Best: 0.000000)
+Epoch  94: Loss = 0.000000 (Best: 0.000000)
+Epoch  95: Loss = 0.000000 (Best: 0.000000)
+Epoch  96: Loss = 0.000001 (Best: 0.000000)
+Epoch  97: Loss = 0.000000 (Best: 0.000000)
+Epoch  98: Loss = 0.000023 (Best: 0.000000)
+Epoch  99: Loss = 0.000004 (Best: 0.000000)
+Epoch 100: Loss = 0.000000 (Best: 0.000000)
+💾 Saved checkpoint at epoch 100
+✅ Final policy saved: motion_imitation_policy_final.pt
+
+🎉 Training completed!
+📊 Trained on 100 motions (11526 frames)
+🏆 Best loss: 0.000000
+
+🎮 Ready for keyboard demo with real motion data!

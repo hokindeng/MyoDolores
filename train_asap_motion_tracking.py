@@ -23,14 +23,14 @@ def setup_training_config():
         'project_name': 'MyoDolores_ASAP_StateOfTheArt',
         
         # Framework settings
-        'simulator': 'isaacgym',  # Best performance for training
+        'simulator': 'mujoco',  # Using MuJoCo instead of Isaac Gym
         'exp': 'motion_tracking',  # Imitation learning mode
         'robot': 'myoskeleton/myoskeleton_324dof',
         'rewards': 'motion_tracking/reward_motion_tracking_basic',
         'obs': 'motion_tracking/motion_tracking',
         
         # Environment settings
-        'num_envs': 4096,  # High parallelization for massive dataset
+        'num_envs': 64,  # Reduced for MuJoCo (more realistic than 4096)
         'headless': True,  # No GUI for faster training
         
         # Training settings
@@ -48,7 +48,7 @@ def setup_training_config():
         'device': 'cuda' if 'cuda' in str(os.environ.get('CUDA_VISIBLE_DEVICES', '')) else 'cpu',
         'mixed_precision': True,
         'gradient_clipping': 1.0,
-        'batch_size': 16384,  # Large batch for massive dataset
+        'batch_size': 1024,  # Adjusted for MuJoCo environments
         
         # Logging
         'wandb_enabled': False,  # Disable for faster training
@@ -403,7 +403,7 @@ def main():
     parser = argparse.ArgumentParser(description="ASAP Motion Tracking Training")
     parser.add_argument("--dry-run", action="store_true", help="Show config without training")
     parser.add_argument("--max-motions", type=int, help="Limit number of motions (for testing)")
-    parser.add_argument("--num-envs", type=int, default=4096, help="Number of environments")
+    parser.add_argument("--num-envs", type=int, default=64, help="Number of environments")
     
     args = parser.parse_args()
     
