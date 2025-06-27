@@ -22,12 +22,7 @@ logs/
 ASAP/logs/
 
 # Checkpoints, models, large binaries
-*.pt
 *.h5
-*.ckpt
-checkpoints/
-keyboard_policy_*.pt
-keyboard_policy_final.pt
 
 # Data archives and compressed files
 *.tar
